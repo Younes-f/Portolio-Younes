@@ -1,0 +1,44 @@
+body{
+    background-color: gray;
+    color: white;
+}
+
+.A{
+    background-color: rgb(94, 165, 165);
+    opacity: 0.6;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-image: url(pingouin.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 10px dashed black;
+    border-color: orange;
+}
+
+.B{
+    background-color: green;
+    opacity: 0.6;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-image: url(pingouin.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 10px dashed black;
+    border-color: orange;
+}
+
+.C{
+    background-color: blueviolet;
+    opacity: 0.6;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-image: url(pingouin.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 10px dashed black;
+    border-color: orange;
+}
+

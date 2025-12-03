@@ -1,0 +1,475 @@
+/*------------------------------------------------------------------------- Style global -----------------------------------------------------------------------------------*/
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+body {
+    background-image: url('Image/fond.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    animation: backgroundCircularMotion 5s linear infinite;
+    margin: 0;  
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes backgroundCircularMotion {
+    0% {
+        background-position: center;
+    }
+    25% {
+        background-position: 75% 25%; /* Mouvement vers le coin supérieur droit */
+    }
+    50% {
+        background-position: center bottom; /* Mouvement vers le bas */
+    }
+    75% {
+        background-position: 25% 75%; /* Mouvement vers le coin inférieur gauche */
+    }
+    100% {
+        background-position: center; /* Retour au centre */
+    }
+}
+
+/*---------------------------------------------------------------------------- En-tête -------------------------------------------------------------------------------------*/
+
+header{
+    background-color: #333;
+    opacity: 0.9;
+    color: #fff; /* Pour que le texte soit visible sur le fond sombre */
+    margin: 0; /* Supprime la marge par défaut */
+    text-align: center; /* Aligne le texte au centre (optionnel) */
+    margin-top: 0;
+    position: fixed; /* Rendre le header fixe */
+    width: 100%;
+    top: 0; /* Positionner le header en haut de la page */
+    height: 60px; /* Ajustez cette valeur selon vos besoins */
+    z-index: 1001; /* Assurez-vous que le header est au-dessus de la barre de navigation */
+}
+
+h1{
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    flex-wrap: wrap;
+    position: fixed; /* Rendre la barre de navigation fixe */
+    top: 0; /* Positionner la barre en haut de la page */
+    width: 100%; /* Prendre toute la largeur de la page */
+    z-index: 1000; /* Assurer que la barre de navigation est au-dessus des autres éléments */
+}
+
+
+
+nav a {
+    color: white;
+    background-color: #333;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 10px 20px; 
+    margin: 10px; 
+    display: inline-block;
+    transition: background-color 0.3s; 
+    position: relative;
+    top: 70px;
+}
+
+nav a:hover{
+    background-color: aqua;
+    color: #333;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*------------------------------------------------------------------------- Corp page acceuil -----------------------------------------------------------------------------------*/ 
+
+h2{
+    text-align: center;
+    font-size: 60px;
+    margin: 200px auto; /* Centre le conteneur du texte */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Masque le texte au début */
+    border-right: 2px solid black; /* Curseur clignotant */
+    animation: typing 2s steps(20, end); /* Animation texte */
+}
+
+@keyframes typing {
+    from {
+        width: 0%; /* Commence avec une largeur de 0 */
+    }
+    to {
+        width: 30%; /* Affiche tout le texte */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Fait clignoter le curseur */
+    }
+}
+
+h3{
+    background-color: black;
+    opacity: 0.9;
+    margin-left: 250px;
+    margin-right: 250px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 2;
+    margin-top: 150px;
+    font-size: 35px;
+
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
+
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%); /* Le texte commence à gauche */
+    }
+    100% {
+        transform: translateX(0); /* Le texte se place à sa position normale */
+    }
+}
+
+
+/*--------------------------------------------------------------------------------- Corp Profil --------------------------------------------------------------------------------------*/
+
+.Presentation {
+    background-color: black;
+    opacity: 0.9;
+    margin: 20px 250px 80px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 20px;
+    padding: 10px 20px;
+    overflow: hidden; /* Pour l'animation */
+    animation: slideIn 1s ease-out forwards;
+}
+
+.titre{ 
+    margin-top: 100px;
+}
+
+.placement {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px; /* Espace entre les cellules */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box {
+    background-color: black; /* Couleur de fond */
+    opacity: 0.9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    font-size: 20px; /* Taille de la police */
+    padding: 10px; /* Ajout d'un peu d'espace autour du contenu */
+    animation: slideIn 1s ease-out forwards;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.box img {
+    width: 500px; /* Largeur fixe pour toutes les images */
+    height: 300px; /* Hauteur fixe pour toutes les images */
+    margin-right: 10px; /* Espace entre l'image et le texte */
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.box img:hover{
+    opacity: 0.7;
+}
+
+.box img:hover + p{
+    color: aqua;
+}
+
+/*------------------------------------------------------------------------------ Corp Compétence  -----------------------------------------------------------------------------------*/
+
+.CVpdf{
+    background-color: #333;
+    border-radius: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.CVpdf:hover{
+    background-color: aqua;
+    color:black;
+}
+.T{
+    background-color: #333;
+    border-radius: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.T:hover{
+    background-color: aqua;
+    color:black;
+}
+.placement2{
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    line-height:2;
+}
+
+.placement2 div a{
+    color:aqua;
+}
+
+.competences {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
+}
+
+.competence {
+    background-color: black;
+    opacity: 0.9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.competence .comp {
+    font-size: 1.5rem;
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #444;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.html { width: 70%; background-color: #f44336; }
+.php { width: 30%; background-color: #ff9800; }
+.python { width: 25%; background-color: #9c27b0; }
+.ip { width: 75%; background-color: #2196f3; }
+.db { width: 50%; background-color: #4caf50; }
+.office { width: 80%; background-color: #009688; }
+
+@media screen and (max-width: 768px) {
+    .competences {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .competences {
+        grid-template-columns: 1fr;
+    }
+}
+
+.A{
+    background-color: black;
+    opacity: 0.9;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
+    font-size: 20px;
+    line-height: 2;
+}
+
+.CV{
+    background-color: black;
+    opacity: 0.9;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 100px;
+    text-align: center;
+}
+ 
+.CVpdf{
+    color: aqua;
+}
+/*-------------------------------------------------------------------------------- Corp Projet -----------------------------------------------------------------------------------*/
+
+.B{
+    background-color: black;
+    opacity: 0.9;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+}
+ 
+.C{
+    margin-bottom: 100px;
+}
+/*----------------------------------------------------------------------------- Corp Experience -----------------------------------------------------------------------------------*/
+
+/*Utilisation de css deja existant*/
+
+.V:hover{   
+    text-decoration:none;
+    color: white;
+    background-color: #333;
+    border-radius: 20px;  
+}
+
+.V{
+    color: aqua;
+}
+
+/* Centrer le titre */
+.proxycom_title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Agrandir l'image proxycom_hall */
+.box img.proxycom_hall {
+    width: 600px;   /* Plus large que les autres images */
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    transition: opacity 0.3s;
+    cursor: pointer; /* Pour montrer que c'est interactif */
+}
+
+/* Même effet au survol que les autres images */
+.box img.proxycom_hall:hover {
+    opacity: 0.7;
+}
+
+/* Faire passer le texte en bleu quand on survole l'image */
+.box img.proxycom_hall:hover + .proxycom_text,
+.box img.proxycom_hall:hover + .proxycom_text * {
+    color: aqua; /* Couleur bleu/vert similaire à ton style */
+    transition: color 0.3s;
+}
+
+/* Supprimer les puces des listes dans proxycom_text */
+.proxycom_text ul {
+    list-style: none;  /* Supprime les points par défaut */
+    padding-left: 0;   /* Supprime le retrait par défaut */
+    margin-left: 0;    /* Ajuste le décalage si nécessaire */
+}
+
+/* Optionnel : garde un petit espacement entre les éléments */
+.proxycom_text li {
+    margin-bottom: 10px;
+}
+/*-------------------------------------------------------------------------------- Crop VT -----------------------------------------------------------------------------------*/
+
+
+.VT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px ;
+    margin-bottom: 100px;
+}
+
+.VT a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    opacity: 0.9;
+    border-radius: 20px;
+    padding: 40px 100px;
+    font-size: 35px;
+}
+
+.VT a:hover {
+    color: #333;
+    cursor: pointer;
+    background-color: aqua;
+}
+
+/*------------------------------------------------------------------------- Corp Contact -----------------------------------------------------------------------------------*/
+.Coordonnees {
+    background-color: black;
+    opacity: 0.9;
+    padding: 5px;
+    margin: 150px 250px 100px;
+    border-radius: 20px;
+    font-size: 30px;
+    animation: slideIn 1s ease-out forwards;
+}
+
+h4 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.Coordonnees li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.iconRes {
+    width: 60px;
+    margin-right: 20px;
+}
+
+/*------------------------------------------------------------------------- Pied de page -----------------------------------------------------------------------------------*/
+
+footer {
+    text-align: center;
+    opacity: 0.9;
+    padding: 5px 0;
+    background-color: #333;
+    color: white;
+    width: 100%; 
+    line-height: 4%;
+}
+
+.mail{
+    color: aqua;
+}
+
+.num{
+    color: aqua;
+}
+
+.mail:hover{
+    color: white;
+}
