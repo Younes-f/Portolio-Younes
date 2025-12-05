@@ -62,7 +62,8 @@
                     <div class="exp-location">Proxycom – Noidans-lès-Vesoul</div>
                 </div>
                 <div class="exp-content">
-                    <img src="Image/proxycom_hall.png" alt="Proxycom" class="exp-img">
+                    <img src="Image/proxycom_hall.png" alt="Proxycom" class="exp-img exp-img-small">
+
                     <h3>Stage technicien réseau – Proxycom</h3>
                     <p class="text-muted">
                         Stage de 5 semaines dans une entreprise spécialisée dans les solutions télécoms
@@ -97,7 +98,7 @@
                     <div class="exp-location">Mister Auto</div>
                 </div>
                 <div class="exp-content">
-                    <img src="Image/mister_auto.png" alt="Mister Auto" class="exp-img">
+                    <img src="Image/mister_auto.png" alt="Mister Auto" class="exp-img exp-img-small">
                     <h3>Préparateur de commandes – Mister Auto</h3>
                     <p class="text-muted">
                         Emploi saisonnier dans une entreprise de distribution de pièces détachées automobiles.
@@ -141,5 +142,24 @@
         </div>
     </div>
 </footer>
+<div id="particles"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("particles");
+    if (!container) return;
+
+    const count = 55; // nombre de particules
+
+    for (let i = 0; i < count; i++) {
+        const p = document.createElement("div");
+        p.classList.add("particle");
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.animationDuration = (10 + Math.random() * 14) + "s";
+        p.style.animationDelay = (Math.random() * 10) + "s";
+        container.appendChild(p);
+    }
+});
+</script>
+
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compétences - Portfolio Younes FARCHICH</title>
+        <title>Compétences - Portfolio Younes FARCHICH</title>
     <link href="Style.css" rel="stylesheet">
     <link rel="icon" href="Image/icon_competence.png">
 </head>
@@ -24,69 +24,89 @@
 </header>
 
 <main>
+    <!-- HEADER PAGE -->
     <header class="page-header">
         <h1 class="page-header-title">Compétences</h1>
         <p class="page-header-subtitle">
-            Un ensemble de compétences en réseau, système, bureautique et développement, consolidées 
-            par des projets concrets et des certifications reconnues.
+            Un profil orienté réseaux &amp; systèmes, renforcé par des bases en développement
+            et des certifications en sécurité et numérique.
         </p>
     </header>
 
+    <!-- HERO COMPETENCES -->
+    <section class="section">
+        <div class="grid skills-hero-grid">
+            <article class="card">
+                <h2>Mon profil technique</h2>
+                <p class="text-muted">
+                    Je me positionne comme un futur <strong>technicien systèmes &amp; réseaux</strong>, capable de
+                    déployer, configurer et maintenir des infrastructures complètes : routeurs, Wi-Fi, postes clients,
+                    annuaires, sécurité…
+                </p>
+                <p class="text-muted">
+                    Mon objectif : combiner la rigueur des réseaux, la compréhension des systèmes
+                    et un minimum de développement pour automatiser les tâches répétitives.
+                </p>
+
+                <div class="chips-row">
+                    <span class="chip">Adressage IP</span>
+                    <span class="chip">MikroTik &amp; Winbox</span>
+                    <span class="chip">Active Directory</span>
+                    <span class="chip">Scripts &amp; automatisation</span>
+                    <span class="chip">Support utilisateur</span>
+                </div>
+            </article>
+
+            <aside class="card skills-stats-card">
+                <h3>Aperçu rapide</h3>
+                <div class="skills-stats-grid">
+                    <div>
+                        <div class="stat-number">Réseau</div>
+                        <div class="stat-label">Adressage, routage, Wi-Fi</div>
+                    </div>
+                    <div>
+                        <div class="stat-number">Systèmes</div>
+                        <div class="stat-label">Windows, AD, scripts</div>
+                    </div>
+                    <div>
+                        <div class="stat-number">Web</div>
+                        <div class="stat-label">HTML / CSS, PHP (bases)</div>
+                    </div>
+                    <div>
+                        <div class="stat-number">Outils</div>
+                        <div class="stat-label">Microsoft 365, bureautique</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
     <!-- COMPÉTENCES TECHNIQUES -->
     <section class="section">
-        <div class="card">
-            <h2>Compétences informatiques</h2>
+        <div class="section-intro">
+            <h2>Compétences techniques</h2>
             <p class="text-muted">
-                Voici un aperçu de mon niveau actuel sur les principaux outils et technologies utilisés
-                au cours de mes études et de mon alternance.
+                Un résumé des domaines sur lesquels je travaille actuellement, avec une estimation de mon niveau
+                et le type d’utilisation que je sais en faire.
             </p>
+        </div>
 
-            <div class="skills-grid">
-                <article class="card skill-card">
-                    <div class="skill-card-header">
-                        <span class="skill-name">HTML / CSS</span>
-                        <span class="skill-level">70%</span>
-                    </div>
-                    <p class="text-muted">Création de sites vitrine, portfolio, pages responsives.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 70%;"></div>
-                    </div>
-                </article>
-
-                <article class="card skill-card">
-                    <div class="skill-card-header">
-                        <span class="skill-name">PHP</span>
-                        <span class="skill-level">30%</span>
-                    </div>
-                    <p class="text-muted">Bases du langage, formulaires, premières notions côté serveur.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 30%;"></div>
-                    </div>
-                </article>
-
-                <article class="card skill-card">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-level">25%</span>
-                    </div>
-                    <p class="text-muted">Scripts simples d’automatisation et d’apprentissage.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 25%;"></div>
-                    </div>
-                </article>
-
-                <article class="card skill-card">
+        <div class="grid grid-3 skills-groups">
+            <!-- Réseau & Systèmes -->
+            <article class="card">
+                <h3>Réseaux &amp; systèmes</h3>
+                <div class="skill-item">
                     <div class="skill-card-header">
                         <span class="skill-name">Adressage IP / Réseau</span>
                         <span class="skill-level">75%</span>
                     </div>
-                    <p class="text-muted">Plan d’adressage, routage de base, configuration de routeurs.</p>
+                    <p class="text-muted">Plan d’adressage, sous-réseaux, configuration de routeurs.</p>
                     <div class="progress-bar">
                         <div class="progress" style="width: 75%;"></div>
                     </div>
-                </article>
+                </div>
 
-                <article class="card skill-card">
+                <div class="skill-item">
                     <div class="skill-card-header">
                         <span class="skill-name">Bases de données</span>
                         <span class="skill-level">50%</span>
@@ -95,135 +115,252 @@
                     <div class="progress-bar">
                         <div class="progress" style="width: 50%;"></div>
                     </div>
-                </article>
+                </div>
 
-                <article class="card skill-card">
+                <div class="skill-item">
                     <div class="skill-card-header">
-                        <span class="skill-name">Suite Microsoft Office</span>
+                        <span class="skill-name">Active Directory / Windows Server</span>
+                        <span class="skill-level">En cours</span>
+                    </div>
+                    <p class="text-muted">Contrôleur de domaine, utilisateurs, OU, GPO, partages.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Développement / Scripting -->
+            <article class="card">
+                <h3>Développement &amp; scripting</h3>
+
+                <div class="skill-item">
+                    <div class="skill-card-header">
+                        <span class="skill-name">HTML / CSS</span>
+                        <span class="skill-level">70%</span>
+                    </div>
+                    <p class="text-muted">Création de sites vitrines et de portfolios responsives.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-card-header">
+                        <span class="skill-name">PHP</span>
+                        <span class="skill-level">30%</span>
+                    </div>
+                    <p class="text-muted">Notions de base côté serveur, formulaires simples.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-card-header">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">25%</span>
+                    </div>
+                    <p class="text-muted">Scripts simples et logique de base.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Outils & Soft Skills -->
+            <article class="card">
+                <h3>Outils &amp; environnement</h3>
+
+                <div class="skill-item">
+                    <div class="skill-card-header">
+                        <span class="skill-name">Microsoft Office / 365</span>
                         <span class="skill-level">80%</span>
                     </div>
-                    <p class="text-muted">Word, Excel, PowerPoint pour la rédaction, l’analyse et les présentations.</p>
+                    <p class="text-muted">Word, Excel, PowerPoint pour rédiger, analyser et présenter.</p>
                     <div class="progress-bar">
                         <div class="progress" style="width: 80%;"></div>
                     </div>
-                </article>
-            </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-card-header">
+                        <span class="skill-name">Systèmes</span>
+                        <span class="skill-level">Windows / Linux (bases)</span>
+                    </div>
+                    <p class="text-muted">Installation, configuration basique, gestion de postes.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 55%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-card-header">
+                        <span class="skill-name">Travail en équipe &amp; support</span>
+                        <span class="skill-level">Fort</span>
+                    </div>
+                    <p class="text-muted">Communication avec les utilisateurs, adaptation sur site.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
     <!-- CERTIFICATIONS -->
-    <section class="section">
+    <section class="section credentials-section">
         <div class="section-intro">
-            <h2>Certifications</h2>
+            <h2>Certifications &amp; attestations</h2>
             <p class="text-muted">
-                Des attestations obtenues dans le cadre de ma formation, autour de la protection des données,
-                de la cybersécurité et des usages numériques.
+                Des validations officielles de mes connaissances en <strong>cybersécurité</strong>, 
+                <strong>protection des données</strong> et <strong>compétences numériques</strong>.
             </p>
         </div>
 
-        <div class="skills-grid">
-            <article class="card skill-card">
-                <div class="card-thumb">
-                    <img src="Image/mooccnil.jpg" alt="MOOC CNIL">
+        <div class="credentials-grid">
+            <!-- MOOC CNIL -->
+            <article class="card credential-card">
+                <div class="credential-header">
+                    <span class="credential-badge">Protection des données</span>
+                    <h3>MOOC CNIL</h3>
+                    <p class="credential-meta">20/11/2024 – Lycée Louis Pergaud, Besançon</p>
                 </div>
-                <h3>MOOC CNIL</h3>
-                <p class="card-meta">20/11/2024 – Lycée Louis Pergaud, Besançon</p>
                 <p class="text-muted">
-                    Attestation sur la protection des données personnelles et le RGPD.
+                    Sensibilisation au RGPD, aux droits des personnes, aux responsabilités des organisations
+                    et aux bonnes pratiques pour manipuler des données personnelles.
                 </p>
-                <a href="Attestation_Diplome/MOOC_CNIL.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                <div class="credential-footer">
+                    <a href="Attestation_Diplome/MOOC_CNIL.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                </div>
             </article>
 
-            <article class="card skill-card">
-                <div class="card-thumb">
-                    <img src="Image/moocan.jpg" alt="MOOC ANSSI">
+            <!-- MOOC ANSSI -->
+            <article class="card credential-card">
+                <div class="credential-header">
+                    <span class="credential-badge">Cybersécurité</span>
+                    <h3>MOOC ANSSI</h3>
+                    <p class="credential-meta">05/12/2024 – Lycée Louis Pergaud, Besançon</p>
                 </div>
-                <h3>MOOC ANSSI</h3>
-                <p class="card-meta">05/12/2024 – Lycée Louis Pergaud, Besançon</p>
                 <p class="text-muted">
-                    Sensibilisation à la cybersécurité et aux bonnes pratiques de sécurité informatique.
+                    Introduction à la sécurité des systèmes d’information : menaces, bonnes pratiques, 
+                    protection des postes, des réseaux et des données.
                 </p>
-                <a href="Attestation_Diplome/AttestationMooc.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                <div class="credential-footer">
+                    <a href="Attestation_Diplome/AttestationMooc.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                </div>
             </article>
 
-            <article class="card skill-card">
-                <div class="card-thumb">
-                    <img src="Image/pix.jpg" alt="PIX">
+            <!-- PIX -->
+            <article class="card credential-card">
+                <div class="credential-header">
+                    <span class="credential-badge">Compétences numériques</span>
+                    <h3>Certification PIX</h3>
+                    <p class="credential-meta">07/03/2023 – Lycée Les Haberges, Vesoul</p>
                 </div>
-                <h3>PIX</h3>
-                <p class="card-meta">07/03/2023 – Lycée Les Haberges, Vesoul</p>
                 <p class="text-muted">
-                    Attestation de compétences numériques (bureautique, web, sécurité, collaboration).
+                    Validation de compétences sur le numérique : bureautique, web, collaboration en ligne,
+                    sécurité et culture numérique.
                 </p>
-                <a href="Attestation_Diplome/attestation_pix.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                <div class="credential-footer">
+                    <a href="Attestation_Diplome/attestation_pix.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                </div>
             </article>
 
-            <article class="card skill-card">
-                <div class="card-thumb">
-                    <img src="Image/assr2.jpg" alt="ASSR2">
+            <!-- ASSR2 -->
+            <article class="card credential-card">
+                <div class="credential-header">
+                    <span class="credential-badge">Sécurité routière</span>
+                    <h3>ASSR2</h3>
+                    <p class="credential-meta">23/06/2021 – Collège Jean Macé, Vesoul</p>
                 </div>
-                <h3>ASSR2</h3>
-                <p class="card-meta">23/06/2021 – Collège Jean Macé, Vesoul</p>
                 <p class="text-muted">
-                    Attestation scolaire de sécurité routière, niveau 2.
+                    Attestation scolaire de sécurité routière niveau 2, sur les règles et comportements à adopter.
                 </p>
-                <a href="Attestation_Diplome/ASSR2.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                <div class="credential-footer">
+                    <a href="Attestation_Diplome/ASSR2.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                </div>
             </article>
 
-            <article class="card skill-card">
-                <div class="card-thumb">
-                    <img src="Image/jdc.jpg" alt="JDC">
+            <!-- JDC -->
+            <article class="card credential-card">
+                <div class="credential-header">
+                    <span class="credential-badge">Civisme</span>
+                    <h3>Journée Défense et Citoyenneté</h3>
+                    <p class="credential-meta">07/12/2023 – Base militaire, Luxeuil-les-Bains</p>
                 </div>
-                <h3>Journée Défense et Citoyenneté</h3>
-                <p class="card-meta">07/12/2023 – Base militaire, Luxeuil-les-Bains</p>
                 <p class="text-muted">
-                    Attestation de participation à la JDC.
+                    Participation à la JDC, étape obligatoire du parcours de citoyenneté.
                 </p>
-                <a href="Attestation_Diplome/JDC.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                <div class="credential-footer">
+                    <a href="Attestation_Diplome/JDC.pdf" target="_blank" class="btn btn-primary">Voir l’attestation</a>
+                </div>
             </article>
         </div>
     </section>
 
     <!-- DIPLÔMES & CV -->
     <section class="section">
-        <div class="grid grid-2">
-            <div class="card">
+        <div class="credentials-layout">
+            <!-- Colonne diplômes -->
+            <div class="credentials-column">
                 <h2>Diplômes</h2>
-                <div class="skills-grid">
-                    <article class="skill-card">
-                        <div class="card-thumb">
-                            <img src="Image/bac.jpg" alt="Baccalauréat">
-                        </div>
-                        <h3>Baccalauréat technologique STMG</h3>
-                        <p class="card-meta">Juin 2024 – Lycée Les Haberges, Vesoul</p>
-                        <p class="text-muted">
-                            Série STMG, spécialité Mercatique, obtenu avec mention Assez bien.
-                        </p>
-                        <a href="Attestation_Diplome/bac.pdf" target="_blank" class="btn btn-primary">Voir le diplôme</a>
-                    </article>
 
-                    <article class="skill-card">
-                        <div class="card-thumb">
-                            <img src="Image/brevet.jpg" alt="Brevet">
-                        </div>
+                <article class="card diploma-card">
+                    <div class="diploma-header">
+                        <h3>Baccalauréat technologique STMG</h3>
+                        <span class="diploma-badge">2024</span>
+                    </div>
+                    <p class="credential-meta">Lycée Les Haberges, Vesoul – Mention Assez bien</p>
+                    <p class="text-muted">
+                        Série STMG, spécialité Mercatique. Ce diplôme m’a apporté des bases en gestion,
+                        marketing et économie, utiles pour comprendre le contexte des entreprises.
+                    </p>
+                    <div class="credential-footer">
+                        <a href="Attestation_Diplome/bac.pdf" target="_blank" class="btn btn-primary">Voir le diplôme</a>
+                    </div>
+                </article>
+
+                <article class="card diploma-card">
+                    <div class="diploma-header">
                         <h3>Brevet des collèges</h3>
-                        <p class="card-meta">Juin 2021 – Collège Jean Macé, Vesoul</p>
-                        <p class="text-muted">
-                            Diplôme national du brevet, obtenu avec mention Bien.
-                        </p>
+                        <span class="diploma-badge">2021</span>
+                    </div>
+                    <p class="credential-meta">Collège Jean Macé, Vesoul – Mention Bien</p>
+                    <p class="text-muted">
+                        Premier diplôme attestant de la validation du socle commun de connaissances
+                        et de compétences.
+                    </p>
+                    <div class="credential-footer">
                         <a href="Attestation_Diplome/brevet.pdf" target="_blank" class="btn btn-primary">Voir le diplôme</a>
-                    </article>
-                </div>
+                    </div>
+                </article>
             </div>
 
-            <aside class="card">
+            <!-- Colonne CV -->
+            <aside class="credentials-column">
                 <h2>Mon CV</h2>
-                <p class="text-muted">
-                    Pour une vue synthétique de mon parcours, de mes expériences et de mes compétences,
-                    vous pouvez consulter mon CV au format PDF.
-                </p>
-                <br>
-                <a href="Attestation_Diplome/CV.pdf" target="_blank" class="btn btn-primary">Télécharger mon CV</a>
+
+                <article class="card cv-highlight">
+                    <p class="cv-tagline">
+                        Vous souhaitez un aperçu rapide de mon profil avant un entretien ?
+                    </p>
+                    <p class="text-muted">
+                        Mon CV synthétise mes <strong>informations personnelles</strong>, 
+                        <strong>compétences</strong>, <strong>expériences</strong> et 
+                        <strong>formations</strong> sur une seule page, prêt à être consulté
+                        par un recruteur ou un jury.
+                    </p>
+
+                    <ul class="cv-points">
+                        <li>Format PDF, lisible facilement.</li>
+                        <li>Mise en page claire et structurée.</li>
+                        <li>Adapté pour les candidatures BTS, alternance, emploi.</li>
+                    </ul>
+
+                    <a href="Attestation_Diplome/CV.pdf" target="_blank" class="btn btn-primary cv-button">
+                        Télécharger mon CV
+                    </a>
+                </article>
             </aside>
         </div>
     </section>
@@ -238,5 +375,25 @@
         </div>
     </div>
 </footer>
+
+<!-- PARTICULES -->
+<div id="particles"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("particles");
+    if (!container) return;
+
+    const count = 55;
+    for (let i = 0; i < count; i++) {
+        const p = document.createElement("div");
+        p.classList.add("particle");
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.animationDuration = (10 + Math.random() * 14) + "s";
+        p.style.animationDelay = (Math.random() * 10) + "s";
+        container.appendChild(p);
+    }
+});
+</script>
+
 </body>
 </html>

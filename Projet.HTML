@@ -24,145 +24,296 @@
 </header>
 
 <main>
+    <!-- EN-TÊTE PAGE -->
     <header class="page-header">
-        <h1 class="page-header-title">Projets</h1>
+        <h1 class="page-header-title">Mes projets</h1>
         <p class="page-header-subtitle">
-            Une sélection de projets réalisés en cours de BTS SIO et en alternance chez Proxycom,
-            autour des réseaux, des systèmes et du déploiement de solutions.
+            Des projets réseaux, systèmes et web réalisés en BTS SIO et en alternance,
+            conçus comme de vrais cas concrets d’entreprise.
         </p>
+
+        <div class="page-header-tags">
+            <span class="tag-pill">Réseaux &amp; infra</span>
+            <span class="tag-pill">Systèmes &amp; AD</span>
+            <span class="tag-pill">Web / Front-end</span>
+            <span class="tag-pill">Projets terrain</span>
+        </div>
     </header>
 
-    <!-- PROJETS SCOLAIRES -->
+    <!-- SECTION HERO PROJETS -->
+    <section class="section projects-hero">
+        <div class="projects-hero-grid">
+            <article class="card projects-hero-main">
+                <h2>De la salle de cours aux environnements de production</h2>
+                <p class="text-muted">
+                    Mes projets sont répartis entre <strong>travaux pratiques en BTS SIO SISR</strong>
+                    (réseau, systèmes, web) et <strong>projets d’entreprise</strong> réalisés en alternance
+                    chez Proxycom. L’objectif : être opérationnel rapidement sur le terrain.
+                </p>
+                <p class="text-muted">
+                    J’aime particulièrement les projets qui combinent <strong>configuration réseau</strong>,
+                    <strong>déploiement d’équipements</strong> et <strong>relation directe avec les utilisateurs</strong>.
+                </p>
+
+                <ul class="project-list-inline">
+                    <li>Architecture réseau &amp; adressage IP</li>
+                    <li>Active Directory &amp; gestion des comptes</li>
+                    <li>Déploiement d’écrans &amp; routeurs</li>
+                    <li>Sites web vitrines &amp; portfolio</li>
+                </ul>
+            </article>
+
+            <aside class="card project-stack-card">
+                <h3>Stack &amp; environnement</h3>
+                <ul class="project-stack-list">
+                    <li>
+                        <span class="stack-label">Réseau</span>
+                        <span class="stack-value">Adressage IP, MikroTik, Wi-Fi, VLAN (bases)</span>
+                    </li>
+                    <li>
+                        <span class="stack-label">Systèmes</span>
+                        <span class="stack-value">Windows, Active Directory, GPO</span>
+                    </li>
+                    <li>
+                        <span class="stack-label">Web</span>
+                        <span class="stack-value">HTML / CSS, PHP (bases)</span>
+                    </li>
+                    <li>
+                        <span class="stack-label">Outils</span>
+                        <span class="stack-value">Winbox, Office 365, outils de supervision (bases)</span>
+                    </li>
+                    <li>
+                        <span class="stack-label">Terrain</span>
+                        <span class="stack-value">Installation, câblage, relation client</span>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <!-- PROJET VEDETTE (STYLE PORTFOLIO DEV) -->
+    <section class="section">
+        <article class="card project-showcase">
+            <div class="project-showcase-media">
+                <!-- Tu pourras mettre un visuel du projet ici :
+                     Image/projet_ecrans_viewsonic.jpg -->
+                <div class="project-showcase-placeholder">Capture projet</div>
+            </div>
+            <div class="project-showcase-content">
+                <span class="badge-soft">Projet phare en alternance</span>
+                <h2>Déploiement d’écrans d’affichage dynamique pour des pompes funèbres</h2>
+                <p class="text-muted">
+                    En alternance chez Proxycom, j’ai participé au déploiement complet d’écrans ViewSonic
+                    d’affichage dynamique sur deux sites de pompes funèbres, avec installation et mise en service
+                    en une seule journée.
+                </p>
+
+                <ul class="project-meta">
+                    <li><strong>Contexte :</strong> moderniser la communication visuelle dans les locaux.</li>
+                    <li><strong>Rôle :</strong> installation physique, branchements, tests, configuration réseau de base.</li>
+                    <li><strong>Résultat :</strong> écrans opérationnels, câblage propre, client satisfait.</li>
+                </ul>
+
+                <div class="project-tags">
+                    <span class="tag">Proxycom</span>
+                    <span class="tag">ViewSonic</span>
+                    <span class="tag">Déploiement terrain</span>
+                    <span class="tag">Réseau local</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- PROJETS RÉSEAUX & INFRASTRUCTURE -->
     <section class="section">
         <div class="section-intro">
-            <h2>Projets scolaires</h2>
+            <h2>Projets réseaux &amp; infrastructure</h2>
             <p class="text-muted">
-                Des projets réalisés au sein du BTS SIO SISR, pour mettre en pratique la théorie :
-                conception de réseaux, configuration de services et création de sites web.
+                Des projets centrés sur l’architecture réseau, l’adressage, les services et la gestion
+                d’une infrastructure pour une salle, une entreprise imaginaire ou un vrai client.
             </p>
         </div>
 
-        <div class="projects-grid">
-            <article class="card project-card">
-                <h3>Portfolio personnel</h3>
-                <div class="project-tags">
-                    <span class="tag">HTML / CSS</span>
-                    <span class="tag">Design</span>
-                </div>
-                <p class="text-muted">
-                    Conception de ce portfolio afin de présenter mon parcours, mes expériences et mes compétences.
-                    Objectif : offrir une interface claire, moderne et agréable à consulter pour un jury ou un recruteur.
-                </p>
-            </article>
+        <div class="projects-columns">
+            <div class="project-column">
+                <h3 class="project-column-title">Architecture &amp; conception</h3>
 
+                <article class="project-card-mini">
+                    <header class="project-card-header">
+                        <h3>Projet XONI</h3>
+                        <span class="pill pill-outline">BTS SIO</span>
+                    </header>
+                    <p class="text-muted">
+                        Conception d’une infrastructure réseau complète pour une entreprise fictive :
+                        schémas, plan d’adressage IP, segmentation et documentation.
+                    </p>
+                    <ul class="project-meta">
+                        <li><strong>Compétences :</strong> adressage IP, VLAN (bases), documentation.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">Architecture réseau</span>
+                        <span class="tag">Schémas</span>
+                    </div>
+                </article>
+
+                <article class="project-card-mini">
+                    <header class="project-card-header">
+                        <h3>Projet Salle 109</h3>
+                        <span class="pill pill-outline">BTS SIO</span>
+                    </header>
+                    <p class="text-muted">
+                        Aménagement d’une salle de cours : installation des postes, branchements réseau,
+                        intégration au domaine et tests.
+                    </p>
+                    <ul class="project-meta">
+                        <li><strong>Compétences :</strong> câblage, réseau local, poste client.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">Postes clients</span>
+                        <span class="tag">Réseau local</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="project-column">
+                <h3 class="project-column-title">Services &amp; administration</h3>
+
+                <article class="project-card-mini">
+                    <header class="project-card-header">
+                        <h3>TP Active Directory</h3>
+                        <span class="pill pill-outline">BTS SIO</span>
+                    </header>
+                    <p class="text-muted">
+                        Mise en place d’un contrôleur de domaine, création d’utilisateurs, unités
+                        d’organisation, GPO et partages réseau.
+                    </p>
+                    <ul class="project-meta">
+                        <li><strong>Compétences :</strong> AD DS, GPO, gestion des droits.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">Windows Server</span>
+                        <span class="tag">AD</span>
+                    </div>
+                </article>
+
+                <article class="project-card-mini">
+                    <header class="project-card-header">
+                        <h3>Configuration MikroTik</h3>
+                        <span class="pill pill-outline">Alternance</span>
+                    </header>
+                    <p class="text-muted">
+                        Pré-configuration de routeurs MikroTik pour les clients : adressage IP, Wi-Fi,
+                        tests de connectivité et préparation des envois.
+                    </p>
+                    <ul class="project-meta">
+                        <li><strong>Compétences :</strong> MikroTik, Winbox, diagnostic.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">MikroTik</span>
+                        <span class="tag">Winbox</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETS WEB / FRONT-END -->
+    <section class="section">
+        <div class="section-intro">
+            <h2>Projets web &amp; interfaces</h2>
+            <p class="text-muted">
+                Des projets orientés interface utilisateur et communication, réalisés principalement
+                en HTML / CSS, pour apprendre à présenter de l’information de manière claire.
+            </p>
+        </div>
+
+        <div class="projects-grid-alt">
             <article class="card project-card">
-                <h3>Site web vitrine</h3>
+                <header class="project-card-header">
+                    <h3>Portfolio actuel</h3>
+                    <span class="pill">Front-end</span>
+                </header>
+                <p class="text-muted">
+                    Portfolio moderne avec fond animé, sections structurées (profil, compétences, projets,
+                    expériences, veille, contact) et mise en forme professionnelle.
+                </p>
+                <ul class="project-meta">
+                    <li><strong>Objectif :</strong> support pour jury, recruteurs et entreprise.</li>
+                    <li><strong>Compétences :</strong> HTML, CSS, design, responsive.</li>
+                </ul>
                 <div class="project-tags">
-                    <span class="tag">Front-end</span>
+                    <span class="tag">UI</span>
                     <span class="tag">Responsive</span>
                 </div>
-                <p class="text-muted">
-                    Création d’un site vitrine en HTML/CSS, avec une structure organisée, des sections
-                    bien identifiées et une mise en page responsive adaptée au mobile.
-                </p>
             </article>
 
             <article class="card project-card">
-                <h3>Projet XONI (réseau)</h3>
-                <div class="project-tags">
-                    <span class="tag">Réseau</span>
-                    <span class="tag">Adressage IP</span>
-                </div>
+                <header class="project-card-header">
+                    <h3>Site vitrine</h3>
+                    <span class="pill">HTML / CSS</span>
+                </header>
                 <p class="text-muted">
-                    Conception d’une infrastructure réseau complète : définition du plan d’adressage, routage,
-                    configuration des machines et réalisation de schémas techniques pour documenter l’architecture.
+                    Création d’un site vitrine simple pour une organisation type : page d’accueil,
+                    présentation, services, contact, avec mise en page responsive.
                 </p>
-            </article>
-
-            <article class="card project-card">
-                <h3>Projet Salle 109</h3>
+                <ul class="project-meta">
+                    <li><strong>Objectif :</strong> travailler la structure et la lisibilité.</li>
+                    <li><strong>Compétences :</strong> HTML, CSS, hiérarchie de contenu.</li>
+                </ul>
                 <div class="project-tags">
-                    <span class="tag">Déploiement</span>
-                    <span class="tag">Postes clients</span>
+                    <span class="tag">Vitrine</span>
+                    <span class="tag">Structure</span>
                 </div>
-                <p class="text-muted">
-                    Aménagement d’une salle de cours : installation et branchement des postes, organisation du
-                    câblage, intégration au réseau existant et vérification du fonctionnement.
-                </p>
-            </article>
-
-            <article class="card project-card">
-                <h3>TP Active Directory</h3>
-                <div class="project-tags">
-                    <span class="tag">Windows Server</span>
-                    <span class="tag">AD DS</span>
-                </div>
-                <p class="text-muted">
-                    Mise en place d’un contrôleur de domaine, création et gestion des utilisateurs, 
-                    des unités d’organisation, des GPO et des partages réseau.
-                </p>
             </article>
         </div>
     </section>
 
-    <!-- PROJETS EN ALTERNANCE -->
+    <!-- TIMELINE / PROGRESSION -->
     <section class="section">
         <div class="section-intro">
-            <h2>Projets en alternance chez Proxycom</h2>
+            <h2>Progression de mes projets</h2>
             <p class="text-muted">
-                Des missions menées sur le terrain, au contact des clients : installation d’équipements,
-                configuration de routeurs et gestion de la logistique.
+                Une vue chronologique de la façon dont mes projets ont évolué, 
+                de la découverte des réseaux jusqu’aux missions en entreprise.
             </p>
         </div>
 
-        <div class="projects-grid">
-            <article class="card project-card">
-                <h3>Installation d’écrans d’affichage</h3>
-                <div class="project-tags">
-                    <span class="tag">ViewSonic</span>
-                    <span class="tag">Déploiement</span>
+        <div class="project-timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023–2024</span>
+                    <h3>Projets de découverte en BTS</h3>
+                    <p class="text-muted">
+                        Premiers projets réseau et web : site vitrine, premières maquettes, 
+                        mise en place d’une architecture simple, TP Active Directory.
+                    </p>
                 </div>
-                <p class="text-muted">
-                    Installation, câblage et mise en service d’écrans d’affichage dynamique pour des pompes funèbres.
-                    Gestion de l’alimentation, du support mural, du routage des câbles et des tests finaux avec le client.
-                </p>
-            </article>
+            </div>
 
-            <article class="card project-card">
-                <h3>Configuration de routeurs MikroTik</h3>
-                <div class="project-tags">
-                    <span class="tag">MikroTik</span>
-                    <span class="tag">Winbox</span>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2024–2025</span>
+                    <h3>Projets structurés &amp; portfolio</h3>
+                    <p class="text-muted">
+                        Projet XONI, Salle 109, version avancée du portfolio et montée en compétences
+                        sur la configuration réseau et les services.
+                    </p>
                 </div>
-                <p class="text-muted">
-                    Configuration avancée de routeurs via Winbox : adressage IP, activation du Wi-Fi, 
-                    sécurisation de l’accès, tests de connectivité et préparation pour l’envoi chez les clients.
-                </p>
-            </article>
+            </div>
 
-            <article class="card project-card">
-                <h3>Inventaire & catalogue ViewSonic</h3>
-                <div class="project-tags">
-                    <span class="tag">Logistique</span>
-                    <span class="tag">Documentation</span>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2025–2026</span>
+                    <h3>Alternance chez Proxycom</h3>
+                    <p class="text-muted">
+                        Déploiement d’écrans, routeurs MikroTik, dépannage Wi-Fi, 
+                        inventaires et projets concrets avec de vrais clients.
+                    </p>
                 </div>
-                <p class="text-muted">
-                    Recensement des écrans et matériels ViewSonic présents en stock, puis création
-                    d’un catalogue clair à destination de l’équipe commerciale et des clients.
-                </p>
-            </article>
-
-            <article class="card project-card">
-                <h3>Dépannage de borne Wi-Fi</h3>
-                <div class="project-tags">
-                    <span class="tag">Support</span>
-                    <span class="tag">Wi-Fi</span>
-                </div>
-                <p class="text-muted">
-                    Diagnostic d’une panne sur une borne Wi-Fi : vérification physique, tests réseau,
-                    réinitialisation et reconfiguration pour rétablir une connexion stable.
-                </p>
-            </article>
+            </div>
         </div>
     </section>
 </main>
@@ -176,5 +327,25 @@
         </div>
     </div>
 </footer>
+
+<!-- PARTICULES -->
+<div id="particles"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("particles");
+    if (!container) return;
+
+    const count = 55;
+    for (let i = 0; i < count; i++) {
+        const p = document.createElement("div");
+        p.classList.add("particle");
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.animationDuration = (10 + Math.random() * 14) + "s";
+        p.style.animationDelay = (Math.random() * 10) + "s";
+        container.appendChild(p);
+    }
+});
+</script>
+
 </body>
 </html>

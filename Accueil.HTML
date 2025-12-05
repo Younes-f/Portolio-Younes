@@ -8,7 +8,10 @@
     <link href="Style.css" rel="stylesheet">
     <link rel="icon" href="Image/icon_acceuil.png">
 </head>
+
 <body>
+
+    <!-- NAVBAR -->
     <header class="header">
         <nav class="navbar">
             <div class="logo">YOUNES FARCHICH</div>
@@ -24,8 +27,9 @@
         </nav>
     </header>
 
+
+    <!-- HERO -->
     <main>
-        <!-- HERO -->
         <section class="hero">
             <div class="hero-inner">
                 <div>
@@ -34,13 +38,13 @@
                         Étudiant BTS SIO – Option SISR
                     </div>
 
-                    <h1 class="hero-title">Construire, sécuriser et faire évoluer les réseaux d&rsquo;entreprise.</h1>
+                    <h1 class="hero-title">Construire, sécuriser et faire évoluer les réseaux d’entreprise.</h1>
                     <p class="hero-subtitle">Younes FARCHICH – Futur technicien systèmes & réseaux</p>
 
                     <p class="hero-text">
                         Actuellement en BTS Services Informatiques aux Organisations, je me spécialise dans 
-                        l&rsquo;administration de réseaux, la mise en place d&rsquo;infrastructures et la sécurité 
-                        des systèmes. Ce portfolio présente mon parcours, mes projets et mes expériences en entreprise.
+                        l’administration de réseaux, la mise en place d’infrastructures et la sécurité des systèmes.
+                        Ce portfolio présente mon parcours, mes projets et mes expériences en entreprise.
                     </p>
 
                     <div class="hero-actions">
@@ -49,16 +53,17 @@
                     </div>
 
                     <div class="hero-tags">
-                        <span class="hero-tag">Réseaux &amp; Systèmes</span>
-                        <span class="hero-tag">MikroTik &amp; Winbox</span>
+                        <span class="hero-tag">Réseaux & Systèmes</span>
+                        <span class="hero-tag">MikroTik & Winbox</span>
                         <span class="hero-tag">Active Directory</span>
                         <span class="hero-tag">Alternance Proxycom</span>
                     </div>
                 </div>
 
-                <aside class="hero-photo-card">
-                    <!-- À REMPLACER par une vraie photo : Image/younes_profil.jpg -->
-                    <img src="Image/younes_profil.jpg" alt="Photo de Younes FARCHICH" class="hero-photo">
+                <!-- CARTE DROITE SANS PHOTO -->
+                <aside class="hero-photo-card no-photo">
+                    <div class="hero-photo-placeholder"></div>
+
                     <div class="hero-highlight">
                         <div>
                             <span class="stat-number">BTS SIO</span>
@@ -73,12 +78,13 @@
             </div>
         </section>
 
+
         <!-- STATS -->
         <section class="section">
             <div class="section-intro">
                 <h2>Mon impact en chiffres</h2>
                 <p class="text-muted">
-                    Quelques repères pour résumer mon parcours actuel en tant qu&rsquo;étudiant et alternant dans le domaine des réseaux.
+                    Quelques repères pour résumer mon parcours actuel en tant qu’étudiant et alternant dans le domaine des réseaux.
                 </p>
             </div>
 
@@ -88,16 +94,19 @@
                     <div class="stat-label">Années de BTS</div>
                     <p class="stat-caption">BTS SIO option SISR au lycée Louis Pergaud.</p>
                 </div>
+
                 <div class="stat-card">
                     <div class="stat-number">+10</div>
                     <div class="stat-label">Projets</div>
                     <p class="stat-caption">Réseau, système, Active Directory, déploiement d’équipements.</p>
                 </div>
+
                 <div class="stat-card">
                     <div class="stat-number">5</div>
                     <div class="stat-label">Attestations</div>
                     <p class="stat-caption">MOOC CNIL, MOOC ANSSI, PIX, ASSR2, JDC.</p>
                 </div>
+
                 <div class="stat-card">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Motivation</div>
@@ -105,6 +114,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- VALEUR AJOUTÉE -->
         <section class="section">
@@ -118,7 +128,7 @@
 
             <div class="grid grid-3">
                 <article class="card">
-                    <h3>Réseaux &amp; infrastructure</h3>
+                    <h3>Réseaux & infrastructure</h3>
                     <p class="text-muted">
                         Mise en place d’adressage IP, configuration de routeurs MikroTik, déploiement de bornes Wi-Fi
                         et gestion des connexions sur site client.
@@ -126,7 +136,7 @@
                 </article>
 
                 <article class="card">
-                    <h3>Organisation &amp; autonomie</h3>
+                    <h3>Organisation & autonomie</h3>
                     <p class="text-muted">
                         Préparation et envoi de matériel, suivi logistique, installation d’équipements dans des délais
                         serrés et respect des consignes de sécurité.
@@ -144,6 +154,8 @@
         </section>
     </main>
 
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
             <p>&copy; 2025 Younes FARCHICH. Tous droits réservés.</p>
@@ -153,5 +165,28 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- PARTICULES -->
+    <div id="particles"></div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("particles");
+        if (!container) return;
+
+        const count = 55;
+
+        for (let i = 0; i < count; i++) {
+            const p = document.createElement("div");
+            p.classList.add("particle");
+            p.style.left = Math.random() * 100 + "vw";
+            p.style.animationDuration = (10 + Math.random() * 14) + "s";
+            p.style.animationDelay = (Math.random() * 10) + "s";
+            container.appendChild(p);
+        }
+    });
+    </script>
+
 </body>
 </html>
