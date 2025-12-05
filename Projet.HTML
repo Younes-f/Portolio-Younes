@@ -1,100 +1,180 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Projets</title>
-        <link rel="stylesheet" href="Style.CSS">
-        <link rel="Projet icon" href="Image/icon_projet.png">
-    </head>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio Younes FARCHICH</title>
+    <link href="Style.css" rel="stylesheet">
+    <link rel="icon" href="Image/icon_projet.png">
+</head>
+<body>
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">YOUNES FARCHICH</div>
+        <ul class="nav-links">
+            <li><a href="Accueil.HTML">Accueil</a></li>
+            <li><a href="Profil.HTML">Profil</a></li>
+            <li><a href="Competences.HTML">Compétences</a></li>
+            <li><a href="Projet.HTML" class="active">Projets</a></li>
+            <li><a href="Experience.HTML">Expériences</a></li>
+            <li><a href="VT.HTML">Veille Tech</a></li>
+            <li><a href="Contact.HTML">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <body>
+<main>
+    <header class="page-header">
+        <h1 class="page-header-title">Projets</h1>
+        <p class="page-header-subtitle">
+            Une sélection de projets réalisés en cours de BTS SIO et en alternance chez Proxycom,
+            autour des réseaux, des systèmes et du déploiement de solutions.
+        </p>
+    </header>
 
-        <header>
-            <h1>Portfolio</h1>
-        </header>
+    <!-- PROJETS SCOLAIRES -->
+    <section class="section">
+        <div class="section-intro">
+            <h2>Projets scolaires</h2>
+            <p class="text-muted">
+                Des projets réalisés au sein du BTS SIO SISR, pour mettre en pratique la théorie :
+                conception de réseaux, configuration de services et création de sites web.
+            </p>
+        </div>
 
-        <nav>
-            <a href="Accueil.HTML">Accueil</a> 
-            <a href="Profil.HTML">Profil</a>
-            <a href="Competences.HTML">Compétences</a>
-            <a href="Projet.HTML">Projets</a>
-            <a href="Experience.HTML">Expériences</a>
-            <a href="VT.HTML">Veille Technologique</a>
-            <a href="Contact.HTML">Contact</a>
-        </nav>
+        <div class="projects-grid">
+            <article class="card project-card">
+                <h3>Portfolio personnel</h3>
+                <div class="project-tags">
+                    <span class="tag">HTML / CSS</span>
+                    <span class="tag">Design</span>
+                </div>
+                <p class="text-muted">
+                    Conception de ce portfolio afin de présenter mon parcours, mes expériences et mes compétences.
+                    Objectif : offrir une interface claire, moderne et agréable à consulter pour un jury ou un recruteur.
+                </p>
+            </article>
 
-        <h3>Mes Projets Scolaires</h3>
+            <article class="card project-card">
+                <h3>Site web vitrine</h3>
+                <div class="project-tags">
+                    <span class="tag">Front-end</span>
+                    <span class="tag">Responsive</span>
+                </div>
+                <p class="text-muted">
+                    Création d’un site vitrine en HTML/CSS, avec une structure organisée, des sections
+                    bien identifiées et une mise en page responsive adaptée au mobile.
+                </p>
+            </article>
 
-        <!-- =====================
-        PROJETS SCOLAIRES
-        ======================-->
+            <article class="card project-card">
+                <h3>Projet XONI (réseau)</h3>
+                <div class="project-tags">
+                    <span class="tag">Réseau</span>
+                    <span class="tag">Adressage IP</span>
+                </div>
+                <p class="text-muted">
+                    Conception d’une infrastructure réseau complète : définition du plan d’adressage, routage,
+                    configuration des machines et réalisation de schémas techniques pour documenter l’architecture.
+                </p>
+            </article>
 
-        <section class="B">
-            <p><b>● Réalisation d'un Portfolio ●</b></p>
-            <p>Ce portfolio a été conçu en HTML et CSS avec l’objectif de proposer une interface claire, moderne et intuitive, permettant de présenter mes compétences et mes projets de manière professionnelle.</p>
-        </section>
-        <br>
+            <article class="card project-card">
+                <h3>Projet Salle 109</h3>
+                <div class="project-tags">
+                    <span class="tag">Déploiement</span>
+                    <span class="tag">Postes clients</span>
+                </div>
+                <p class="text-muted">
+                    Aménagement d’une salle de cours : installation et branchement des postes, organisation du
+                    câblage, intégration au réseau existant et vérification du fonctionnement.
+                </p>
+            </article>
 
-        <section class="B">
-            <p><b>● Réalisation d’un site ●</b></p>
-            <p>Création d’un site web vitrine en HTML/CSS, respectant les standards responsive, avec une structure organisée et un design épuré.</p>
-        </section>
-        <br>
+            <article class="card project-card">
+                <h3>TP Active Directory</h3>
+                <div class="project-tags">
+                    <span class="tag">Windows Server</span>
+                    <span class="tag">AD DS</span>
+                </div>
+                <p class="text-muted">
+                    Mise en place d’un contrôleur de domaine, création et gestion des utilisateurs, 
+                    des unités d’organisation, des GPO et des partages réseau.
+                </p>
+            </article>
+        </div>
+    </section>
 
-        <section class="B">
-            <p><b>● Projet XONI (réseau) ●</b></p>
-            <p>Conception et mise en place d’une infrastructure réseau complète : adressage IP, routage, configuration de services et création de schémas techniques.</p>
-        </section>
-        <br>
+    <!-- PROJETS EN ALTERNANCE -->
+    <section class="section">
+        <div class="section-intro">
+            <h2>Projets en alternance chez Proxycom</h2>
+            <p class="text-muted">
+                Des missions menées sur le terrain, au contact des clients : installation d’équipements,
+                configuration de routeurs et gestion de la logistique.
+            </p>
+        </div>
 
-        <section class="B">
-            <p><b>● Projet Salle 109 ●</b></p>
-            <p>Aménagement d’une salle de cours : installation du matériel informatique, configuration réseau, organisation du câblage et optimisation des postes.</p>
-        </section>
-        <br>
+        <div class="projects-grid">
+            <article class="card project-card">
+                <h3>Installation d’écrans d’affichage</h3>
+                <div class="project-tags">
+                    <span class="tag">ViewSonic</span>
+                    <span class="tag">Déploiement</span>
+                </div>
+                <p class="text-muted">
+                    Installation, câblage et mise en service d’écrans d’affichage dynamique pour des pompes funèbres.
+                    Gestion de l’alimentation, du support mural, du routage des câbles et des tests finaux avec le client.
+                </p>
+            </article>
 
-        <section class="B">
-            <p><b>● TP Active Directory ●</b></p>
-            <p>Installation et configuration d’un contrôleur de domaine, gestion complète des utilisateurs, unités d’organisation, GPO et partage réseau.</p>
-        </section>
-        <br>
+            <article class="card project-card">
+                <h3>Configuration de routeurs MikroTik</h3>
+                <div class="project-tags">
+                    <span class="tag">MikroTik</span>
+                    <span class="tag">Winbox</span>
+                </div>
+                <p class="text-muted">
+                    Configuration avancée de routeurs via Winbox : adressage IP, activation du Wi-Fi, 
+                    sécurisation de l’accès, tests de connectivité et préparation pour l’envoi chez les clients.
+                </p>
+            </article>
 
-        <!-- =====================
-        PROJETS EN ALTERNANCE
-        ======================-->
+            <article class="card project-card">
+                <h3>Inventaire & catalogue ViewSonic</h3>
+                <div class="project-tags">
+                    <span class="tag">Logistique</span>
+                    <span class="tag">Documentation</span>
+                </div>
+                <p class="text-muted">
+                    Recensement des écrans et matériels ViewSonic présents en stock, puis création
+                    d’un catalogue clair à destination de l’équipe commerciale et des clients.
+                </p>
+            </article>
 
-        <h3 class="C">Projets réalisés en Alternance</h3>
+            <article class="card project-card">
+                <h3>Dépannage de borne Wi-Fi</h3>
+                <div class="project-tags">
+                    <span class="tag">Support</span>
+                    <span class="tag">Wi-Fi</span>
+                </div>
+                <p class="text-muted">
+                    Diagnostic d’une panne sur une borne Wi-Fi : vérification physique, tests réseau,
+                    réinitialisation et reconfiguration pour rétablir une connexion stable.
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
 
-        <section class="B">
-            <p><b>● Installation d’écrans (pompes funèbres) ●</b></p>
-            <p>Installation, câblage et mise en service d’écrans d’affichage dynamique destinés à la communication interne et externe.</p>
-        </section>
-        <br>
-        <section class="B">
-            <p><b>● Configuration de routeurs MikroTik avec Winbox ●</b></p>
-            <p>Configuration avancée de routeurs MikroTik : VLAN, firewall, routage, gestion des accès et optimisation des performances réseau.</p>
-        </section>
-        <br>
-
-        <section class="B">
-            <p><b>● Gestion logistique et création de catalogue ViewSonic ●</b></p>
-            <p>Inventaire complet du matériel, gestion logistique et création d’un catalogue détaillé regroupant les produits et équipements ViewSonic.</p>
-        </section>
-        <br>
-
-        <section class="B">
-            <p><b>● Dépannage et configuration d'une borne Wi-Fi chez une cliente ●</b></p>
-            <p>Diagnostic d’une panne réseau, réinstallation et configuration d’une borne Wi-Fi afin de restaurer une connexion stable et performante.</p>
-        </section>
-        <br>
-
-        <h3 class="C">Prochain projet à suivre...</h3>
-
-        <footer>
-            <p>© 2025 FARCHICH Younes. Tous droits réservés.</p>
-            <p>Email : <a href="mailto:Younes.f26@outlook.fr" class="mail">Younes.f26@outlook.fr</a></p>
-            <p>Numéro : <a class="num">07 67 06 68 68</a></p>
-        </footer>
-
-    </body>
+<footer class="footer">
+    <div class="footer-inner">
+        <p>&copy; 2025 Younes FARCHICH. Tous droits réservés.</p>
+        <div class="footer-links">
+            <span>Email : <a href="mailto:Younes.f26@outlook.fr">Younes.f26@outlook.fr</a></span>
+            <span>Téléphone : <a href="tel:+33767066868">07 67 06 68 68</a></span>
+        </div>
+    </div>
+</footer>
+</body>
 </html>

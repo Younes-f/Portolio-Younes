@@ -1,40 +1,272 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Veille Technologique</title>
-        <link rel="stylesheet" href="Style.CSS">
-        <link rel="VT icon" href="Image/icon_loupe.png">
-    </head>
-    <body>
-        <header>
-            <h1>Portfolio</h1>
-        </header>
-        <nav>
-            <a href="Accueil.HTML">Accueil</a> 
-            <a href="Profil.HTML">Profil</a>
-            <a href="Competences.HTML">Compétences</a>
-            <a href="Projet.HTML">Projets</a>
-            <a href="Experience.HTML">Expériences</a>
-            <a href="VT.HTML">Veille Technologique</a>
-            <a href="Contact.HTML">Contact</a>
-        </nav>
-        <main>
-            <h3>Les sujets qui m'intéressent</h3>
-            <section class="placement2">
-                <p class="box"><img src="Image/ia_image.jpg" alt="image de ia"><a href="https://www.cnil.fr/fr/definition/intelligence-artificielle" alt="lien IA" target="_blank" class="V"><B>● Intelligence Artificielle (IA) ●</B></a></p>
-                <p class="box"><img src="Image/cyber_img.png" alt="image de Cybersécurité"><a href="https://www.cnil.fr/fr/technologies/cybersecurite" alt="lien Cybersécurité" target="_blank" class="V"><b>● Cybersécurité ●</b></a></p>
-            </section>
-        </main>
-        
-        
-        <p class="VT"> <a href="Accueil.HTML">Page en cours de production</a></p>
-        
-        <footer>
-            <p>© 2024 FARCHICH Younes. Tous droits réservés.</p>
-            <p>Email : <a href="mailto:Younes.f26@outlook.fr" class="mail" >Younes.f26@outlook.fr</a></p>
-            <p>Numéro : <a class="num" >07 67 06 68 68</a></p>
-        </footer>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille technologique - Crypto & Blockchain - Portfolio Younes FARCHICH</title>
+    <link href="Style.css" rel="stylesheet">
+    <link rel="icon" href="Image/icon_loupe.png">
+</head>
+<body>
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">YOUNES FARCHICH</div>
+        <ul class="nav-links">
+            <li><a href="Accueil.HTML">Accueil</a></li>
+            <li><a href="Profil.HTML">Profil</a></li>
+            <li><a href="Competences.HTML">Compétences</a></li>
+            <li><a href="Projet.HTML">Projets</a></li>
+            <li><a href="Experience.HTML">Expériences</a></li>
+            <li><a href="VT.HTML" class="active">Veille Tech</a></li>
+            <li><a href="Contact.HTML">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    </body>
+<main>
+    <!-- INTRO -->
+    <header class="page-header">
+        <h1 class="page-header-title">Veille technologique : Crypto-monnaie &amp; Blockchain</h1>
+        <p class="page-header-subtitle">
+            Une veille menée sur l&rsquo;évolution des crypto-monnaies et de la technologie blockchain :
+            enjeux techniques, tendances du marché, acteurs clés et outils utilisés pour rester informé.
+        </p>
+    </header>
+
+    <!-- QU'EST-CE QU'UNE VEILLE ? + CONTEXTE -->
+    <section class="section">
+        <div class="grid grid-2">
+            <article class="card">
+                <h2>Qu&rsquo;est-ce qu&rsquo;une veille technologique&nbsp;?</h2>
+                <p class="text-muted">
+                    Une <strong>veille technologique</strong> est un processus d’acquisition et d’analyse
+                    d’informations sur les évolutions techniques d’un domaine donné. Elle permet :
+                </p>
+                <ul class="contact-list">
+                    <li>• d’anticiper les changements et les innovations&nbsp;;</li>
+                    <li>• de détecter des opportunités techniques ou économiques&nbsp;;</li>
+                    <li>• de rester compétitif et de s’adapter rapidement&nbsp;;</li>
+                    <li>• d’identifier de nouvelles sources de valeur pour les organisations.</li>
+                </ul>
+                <p class="text-muted">
+                    Dans mon cas, j’ai choisi de concentrer ma veille sur la <strong>crypto-monnaie</strong> 
+                    et sa <strong>blockchain</strong>, un domaine en évolution rapide
+                    avec des enjeux technologiques, réglementaires et sociétaux importants.
+                </p>
+            </article>
+
+            <aside class="card">
+                <h2>Pourquoi la crypto-monnaie et la blockchain&nbsp;?</h2>
+                <p class="text-muted">
+                    La blockchain est une technologie qui ne se limite pas au Bitcoin. Elle est aujourd’hui
+                    au cœur de nombreux projets dans différents secteurs : finance, logistique, santé,
+                    identité numérique, etc.
+                </p>
+                <ul class="contact-list">
+                    <li><strong>Applications variées :</strong> paiements, traçabilité, contrats intelligents.</li>
+                    <li><strong>Transparence :</strong> toutes les transactions sont inscrites dans un registre partagé.</li>
+                    <li><strong>Lutte contre la fraude :</strong> les mécanismes cryptographiques rendent
+                        la falsification extrêmement difficile.</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <!-- VEILLE EN INFORMATIQUE + PLACE DU SUJET -->
+    <section class="section">
+        <div class="section-intro">
+            <h2>Ma veille dans le domaine informatique</h2>
+            <p class="text-muted">
+                Ma veille globale porte sur plusieurs grands thèmes en informatique, dont la blockchain
+                n’est qu’un élément, mais un élément central pour l’avenir.
+            </p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">Sécurité</div>
+                <div class="stat-label">Cybersécurité</div>
+                <p class="stat-caption">
+                    Protection des données, sécurité des applications, gestion des identités.
+                </p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Réseaux</div>
+                <div class="stat-label">Systèmes &amp; infra</div>
+                <p class="stat-caption">
+                    Administration de réseaux, serveurs, virtualisation et supervision.
+                </p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Cloud</div>
+                <div class="stat-label">Cloud &amp; IA</div>
+                <p class="stat-caption">
+                    Services en ligne, intelligence artificielle, automatisation.
+                </p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Blockchain</div>
+                <div class="stat-label">Crypto-actifs</div>
+                <p class="stat-caption">
+                    Registres distribués, crypto-monnaies, finance décentralisée (DeFi).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI LA BLOCKCHAIN -->
+    <section class="section">
+        <div class="card">
+            <h2>Les atouts de la technologie blockchain</h2>
+            <div class="grid grid-3">
+                <article>
+                    <h3>Applications concrètes</h3>
+                    <p class="text-muted">
+                        Utilisation dans la finance (paiements, DeFi), la santé (traçabilité des données),
+                        la logistique (suivi des chaînes d’approvisionnement) ou encore l’identité numérique.
+                    </p>
+                </article>
+                <article>
+                    <h3>Transparence des transactions</h3>
+                    <p class="text-muted">
+                        Chaque transaction est inscrite dans un bloc, relié aux précédents. Le registre
+                        distribué permet de vérifier l’historique complet et garantit une forte transparence.
+                    </p>
+                </article>
+                <article>
+                    <h3>Protection contre la fraude</h3>
+                    <p class="text-muted">
+                        Grâce au chiffrement, aux fonctions de hachage et aux mécanismes de consensus,
+                        il est extrêmement difficile de modifier l’historique sans être détecté.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTILS DE VEILLE -->
+    <section class="section">
+        <div class="section-intro">
+            <h2>Outils utilisés pour ma veille</h2>
+            <p class="text-muted">
+                Pour suivre l’actualité des crypto-monnaies et de la blockchain, j’ai mis en place une veille
+                basée sur trois outils complémentaires : Google Alerts, Feedly et Twitter (X).
+            </p>
+        </div>
+
+        <div class="grid grid-3">
+            <!-- GOOGLE ALERTS -->
+            <article class="card">
+                <h3>Outil 1 : Google Alerts</h3>
+                <p class="text-muted">
+                    Google Alerts me permet de recevoir automatiquement par mail les dernières actualités
+                    liées à des mots-clés comme <strong>“Blockchain”</strong> ou <strong>“crypto-monnaie”</strong>.
+                </p>
+                <ul class="contact-list">
+                    <li><strong>Mise en place :</strong> définition de mots-clés, fréquence, sources, langue.</li>
+                    <li><strong>Avantages :</strong> rapide à configurer, synthèse automatique, gain de temps.</li>
+                    <li><strong>Limite :</strong> certaines alertes peuvent être redondantes ou peu pertinentes.</li>
+                </ul>
+            </article>
+
+            <!-- FEEDLY -->
+            <article class="card">
+                <h3>Outil 2 : Feedly</h3>
+                <p class="text-muted">
+                    Avec Feedly, je regroupe plusieurs sites spécialisés dans un <strong>dossier “Blockchain / Crypto”</strong>
+                    pour centraliser les flux RSS et articles.
+                </p>
+                <ul class="contact-list">
+                    <li>Ajout de sources fiables (sites d’actualité, blogs techniques).</li>
+                    <li>Organisation par dossiers pour séparer les thèmes (veille générale, veille crypto…).</li>
+                    <li>Vue d’ensemble des nouveautés classées par date.</li>
+                </ul>
+            </article>
+
+            <!-- TWITTER -->
+            <article class="card">
+                <h3>Outil 3 : Twitter (X)</h3>
+                <p class="text-muted">
+                    Twitter (X) me permet de suivre les acteurs majeurs du secteur en temps réel, comme
+                    des développeurs, chercheurs ou fondateurs de projets blockchain.
+                </p>
+                <ul class="contact-list">
+                    <li><strong>Mise en place :</strong> recherche de comptes experts (ex.&nbsp;: @VitalikButerin), création
+                        d’une liste “Blockchain &amp; Crypto”, ajout de profils fiables.</li>
+                    <li><strong>Avantages :</strong> informations immédiates, annonces officielles des projets.</li>
+                    <li><strong>Limite :</strong> nécessité de vérifier les sources pour éviter les fake news.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONNAISSANCES & TENDANCES -->
+    <section class="section">
+        <div class="card">
+            <h2>Ce que cette veille m&rsquo;a permis de comprendre</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3>Connaissances techniques</h3>
+                    <ul class="contact-list">
+                        <li>• Fonctionnement de la blockchain : blocs, hash, nœuds du réseau.</li>
+                        <li>• Rôle du <strong>consensus</strong> et des <strong>mineurs / validateurs</strong>.</li>
+                        <li>• Différences entre <strong>Proof of Work</strong> (PoW) et <strong>Proof of Stake</strong> (PoS).</li>
+                    </ul>
+
+                    <h3>Tendances observées</h3>
+                    <ul class="contact-list">
+                        <li>• Développement du <strong>Web3</strong> et des <strong>smart contracts</strong>.</li>
+                        <li>• Montée des projets de <strong>blockchain écoresponsable</strong>.</li>
+                        <li>• Importance croissante d’Ethereum et de la <strong>finance décentralisée (DeFi)</strong>.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Évolutions réglementaires</h3>
+                    <ul class="contact-list">
+                        <li>• Suivi du cadre européen <strong>MiCA (Markets in Crypto-Assets)</strong>.</li>
+                        <li>• Renforcement des règles pour lutter contre le blanchiment et la fraude.</li>
+                        <li>• Importance de la traçabilité et de la protection des données.</li>
+                    </ul>
+
+                    <h3>Bilan personnel</h3>
+                    <ul class="contact-list">
+                        <li>• J’ai appris à configurer et utiliser plusieurs outils de veille.</li>
+                        <li>• Je sais mieux trier, recouper et vérifier les informations trouvées.</li>
+                        <li>• J’ai une vision plus claire des enjeux techniques, sécuritaires et réglementaires de la blockchain.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section class="section">
+        <div class="card">
+            <h2>Conclusion</h2>
+            <p class="text-muted">
+                Cette veille technologique m’a permis de mieux comprendre pourquoi la blockchain est une technologie
+                stratégique pour l’avenir : elle apporte de la <strong>sécurité</strong>, de la <strong>traçabilité</strong>
+                et de la <strong>confiance numérique</strong> dans de nombreux domaines.
+            </p>
+            <p class="text-muted">
+                Au-delà de la spéculation sur les crypto-monnaies, j’ai découvert un écosystème complet&nbsp;:
+                Web3, smart contracts, DeFi, nouveaux modèles économiques et enjeux réglementaires.
+                Cette démarche de veille m’aidera dans la suite de mon BTS SIO SISR et dans mon futur métier
+                de technicien systèmes &amp; réseaux, où rester informé est indispensable.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <p>&copy; 2025 Younes FARCHICH. Tous droits réservés.</p>
+        <div class="footer-links">
+            <span>Email : <a href="mailto:Younes.f26@outlook.fr">Younes.f26@outlook.fr</a></span>
+            <span>Téléphone : <a href="tel:+33767066868">07 67 06 68 68</a></span>
+        </div>
+    </div>
+</footer>
+</body>
 </html>

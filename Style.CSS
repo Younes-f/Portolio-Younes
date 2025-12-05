@@ -1,475 +1,818 @@
-/*------------------------------------------------------------------------- Style global -----------------------------------------------------------------------------------*/
+/* =========================
+   VARIABLES GLOBALES
+========================= */
+:root {
+    --bg-color: #050814;
+    --bg-elevated: rgba(10, 15, 30, 0.95);
+    --card-bg: rgba(15, 23, 42, 0.9);
+    --accent: #00bcd4;
+    --accent-soft: rgba(0, 188, 212, 0.2);
+    --accent-strong: #4dd0e1;
+    --text-main: #f9fafb;
+    --text-muted: #9ca3af;
+    --border-radius: 14px;
+    --transition: all 0.25s ease;
+    --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.65);
+    --max-width: 1100px;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 html, body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     height: 100%;
-    justify-content: space-between;
 }
 
 body {
-    background-image: url('Image/fond.jpeg');
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    animation: backgroundCircularMotion 5s linear infinite;
-    margin: 0;  
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-@keyframes backgroundCircularMotion {
-    0% {
-        background-position: center;
-    }
-    25% {
-        background-position: 75% 25%; /* Mouvement vers le coin supérieur droit */
-    }
-    50% {
-        background-position: center bottom; /* Mouvement vers le bas */
-    }
-    75% {
-        background-position: 25% 75%; /* Mouvement vers le coin inférieur gauche */
-    }
-    100% {
-        background-position: center; /* Retour au centre */
-    }
-}
-
-/*---------------------------------------------------------------------------- En-tête -------------------------------------------------------------------------------------*/
-
-header{
-    background-color: #333;
-    opacity: 0.9;
-    color: #fff; /* Pour que le texte soit visible sur le fond sombre */
-    margin: 0; /* Supprime la marge par défaut */
-    text-align: center; /* Aligne le texte au centre (optionnel) */
-    margin-top: 0;
-    position: fixed; /* Rendre le header fixe */
-    width: 100%;
-    top: 0; /* Positionner le header en haut de la page */
-    height: 60px; /* Ajustez cette valeur selon vos besoins */
-    z-index: 1001; /* Assurez-vous que le header est au-dessus de la barre de navigation */
-}
-
-h1{
-    margin-top: 10px;
-}
-
-nav {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(0, 188, 212, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(79, 70, 229, 0.18), transparent 60%),
+        var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.7;
     display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
+    flex-direction: column;
+}
+
+/* =========================
+   LAYOUT GLOBAL
+========================= */
+
+main {
+    flex: 1;
+    padding-top: 96px; /* espace sous le header fixe */
+}
+
+.section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem 3.5rem;
+}
+
+/* =========================
+   HEADER + NAV
+========================= */
+.header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    background: linear-gradient(
+        120deg,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.8)
+    );
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.navbar {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: .08em;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: .25rem .75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.9);
+    background: radial-gradient(circle at top left, rgba(0, 188, 212, 0.2), transparent 60%);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: .75rem;
     flex-wrap: wrap;
-    position: fixed; /* Rendre la barre de navigation fixe */
-    top: 0; /* Positionner la barre en haut de la page */
-    width: 100%; /* Prendre toute la largeur de la page */
-    z-index: 1000; /* Assurer que la barre de navigation est au-dessus des autres éléments */
+    justify-content: flex-end;
 }
 
-
-
-nav a {
-    color: white;
-    background-color: #333;
-    border-radius: 8px;
-    text-decoration: none;
-    padding: 10px 20px; 
-    margin: 10px; 
-    display: inline-block;
-    transition: background-color 0.3s; 
+.nav-links a {
     position: relative;
-    top: 70px;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .45rem .95rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: .9rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: var(--transition);
 }
 
-nav a:hover{
-    background-color: aqua;
-    color: #333;
+.nav-links a::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-color: var(--accent-soft);
+    background: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+}
+
+.nav-links a.active::before {
+    background: var(--accent);
+}
+
+/* =========================
+   TITRES & TEXTES
+========================= */
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: .03em;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 4vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.9rem, 3vw, 2.3rem);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: .75rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+}
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .7rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
     cursor: pointer;
-    transform: scale(1.1);
+    transition: var(--transition);
+    white-space: nowrap;
 }
 
-/*------------------------------------------------------------------------- Corp page acceuil -----------------------------------------------------------------------------------*/ 
-
-h2{
-    text-align: center;
-    font-size: 60px;
-    margin: 200px auto; /* Centre le conteneur du texte */
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    overflow: hidden; /* Masque le texte au début */
-    border-right: 2px solid black; /* Curseur clignotant */
-    animation: typing 2s steps(20, end); /* Animation texte */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    color: #020617;
+    box-shadow: 0 15px 40px rgba(45, 212, 191, 0.35);
 }
 
-@keyframes typing {
-    from {
-        width: 0%; /* Commence avec une largeur de 0 */
-    }
-    to {
-        width: 30%; /* Affiche tout le texte */
-    }
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 45px rgba(45, 212, 191, 0.45);
 }
 
-@keyframes blink {
-    50% {
-        border-color: transparent; /* Fait clignoter le curseur */
-    }
+.btn-ghost {
+    border-color: rgba(148, 163, 184, 0.5);
+    background: rgba(15, 23, 42, 0.8);
+    color: var(--text-main);
 }
 
-h3{
-    background-color: black;
-    opacity: 0.9;
-    margin-left: 250px;
-    margin-right: 250px;
-    border-radius: 20px;
-    text-align: center;
-    line-height: 2;
-    margin-top: 150px;
-    font-size: 35px;
-
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
-
+.btn-ghost:hover {
+    border-color: var(--accent);
+    background: rgba(15, 23, 42, 1);
 }
 
+/* =========================
+   HERO ACCUEIL
+========================= */
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%); /* Le texte commence à gauche */
-    }
-    100% {
-        transform: translateX(0); /* Le texte se place à sa position normale */
-    }
+.hero {
+    padding: 4rem 1.5rem 3.5rem;
 }
 
-
-/*--------------------------------------------------------------------------------- Corp Profil --------------------------------------------------------------------------------------*/
-
-.Presentation {
-    background-color: black;
-    opacity: 0.9;
-    margin: 20px 250px 80px;
-    border-radius: 20px;
-    text-align: center;
-    line-height: 1.5;
-    font-size: 20px;
-    padding: 10px 20px;
-    overflow: hidden; /* Pour l'animation */
-    animation: slideIn 1s ease-out forwards;
-}
-
-.titre{ 
-    margin-top: 100px;
-}
-
-.placement {
-    justify-content: center;
+.hero-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px; /* Espace entre les cellules */
-    margin-left: 10px;
-    margin-right: 10px;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+    gap: 2.5rem;
+    align-items: center;
 }
 
-.box {
-    background-color: black; /* Couleur de fond */
-    opacity: 0.9;
-    border-radius: 20px;
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .25rem .8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    background: rgba(15, 23, 42, 0.75);
+    color: var(--text-muted);
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-badge span {
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--accent);
+}
+
+.hero-title {
+    margin-bottom: .8rem;
+    background: linear-gradient(120deg, #e5e7eb, #67e8f9);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--accent-strong);
+    margin-bottom: .9rem;
+}
+
+.hero-text {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    max-width: 540px;
+}
+
+.hero-actions {
     display: flex;
-    align-items: center; /* Alignement vertical */
-    font-size: 20px; /* Taille de la police */
-    padding: 10px; /* Ajout d'un peu d'espace autour du contenu */
-    animation: slideIn 1s ease-out forwards;
-    margin-bottom: 100px;
-    text-align: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-bottom: 1.8rem;
 }
 
-.box img {
-    width: 500px; /* Largeur fixe pour toutes les images */
-    height: 300px; /* Hauteur fixe pour toutes les images */
-    margin-right: 10px; /* Espace entre l'image et le texte */
-    margin-left: 10px;
-    border-radius: 20px;
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    font-size: .78rem;
+    color: var(--text-muted);
 }
 
-.box img:hover{
-    opacity: 0.7;
+.hero-tag {
+    padding: .18rem .7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: rgba(15, 23, 42, 0.9);
 }
 
-.box img:hover + p{
-    color: aqua;
+.hero-photo-card {
+    position: relative;
+    background: radial-gradient(circle at top, rgba(56, 189, 248, 0.4), rgba(15, 23, 42, 0.98));
+    border-radius: 1.5rem;
+    padding: 1.8rem 1.5rem 1.4rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    overflow: hidden;
 }
 
-/*------------------------------------------------------------------------------ Corp Compétence  -----------------------------------------------------------------------------------*/
-
-.CVpdf{
-    background-color: #333;
-    border-radius: 20px;
-    padding: 10px;
-    text-decoration: none;
+.hero-photo {
+    width: 210px;
+    height: 210px;
+    border-radius: 999px;
+    border: 4px solid rgba(15, 23, 42, 0.9);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1.4rem;
+    background: #020617;
 }
 
-.CVpdf:hover{
-    background-color: aqua;
-    color:black;
-}
-.T{
-    background-color: #333;
-    border-radius: 20px;
-    padding: 10px;
-    text-decoration: none;
+.hero-highlight {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: .8rem;
 }
 
-.T:hover{
-    background-color: aqua;
-    color:black;
-}
-.placement2{
-    justify-content: center;
-    margin-left: 200px;
-    margin-right: 200px;
-    line-height:2;
+.hero-highlight span:first-child {
+    font-weight: 600;
 }
 
-.placement2 div a{
-    color:aqua;
-}
-
-.competences {
+/* =========================
+   GRILLES GÉNÉRIQUES
+========================= */
+.grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
+    gap: 1.6rem;
 }
 
-.competence {
-    background-color: black;
-    opacity: 0.9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    margin-bottom: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 20px;
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.competence .comp {
-    font-size: 1.5rem;
-    color: #00bcd4;
-    margin-bottom: 10px;
+.grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .hero {
+        padding-top: 4.5rem;
+    }
+}
+
+/* =========================
+   CARTES
+========================= */
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    padding: 1.3rem 1.4rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--accent-soft);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.95);
+}
+
+/* Stats */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1.8rem;
+}
+
+.stat-card {
+    padding: 1.1rem 1.1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: radial-gradient(circle at top left, rgba(0, 188, 212, 0.22), rgba(15, 23, 42, 0.95));
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: .15rem;
+}
+
+.stat-label {
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--text-muted);
+}
+
+.stat-caption {
+    font-size: .82rem;
+    margin-top: .25rem;
+    color: var(--text-muted);
+}
+
+/* =========================
+   SECTIONS GÉNÉRIQUES PAGE
+========================= */
+
+.page-header {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 1rem;
+}
+
+.page-header-title {
+    font-size: clamp(2rem, 3vw, 2.4rem);
+    margin-bottom: .5rem;
+}
+
+.page-header-subtitle {
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+/* =========================
+   PROFIL / TEXTE + LISTE
+========================= */
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.profile-bio {
+    padding: 1.4rem 1.5rem;
+}
+
+.profile-aside {
+    padding: 1.4rem 1.5rem;
+}
+
+.info-list {
+    list-style: none;
+    font-size: .92rem;
+}
+
+.info-list li {
+    margin-bottom: .6rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: var(--text-muted);
+}
+
+.info-list strong {
+    color: var(--text-main);
+}
+
+/* Formation timeline simple */
+
+.timeline {
+    border-left: 1px solid rgba(148, 163, 184, 0.6);
+    margin-top: 1.3rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.4rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -1.55rem;
+    top: .3rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.2);
+}
+
+.timeline-year {
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    letter-spacing: .12em;
+    margin-bottom: .15rem;
+}
+
+.timeline-title {
+    font-weight: 600;
+    margin-bottom: .15rem;
+}
+
+.timeline-place {
+    font-size: .86rem;
+    color: var(--text-muted);
+}
+
+/* =========================
+   COMPÉTENCES
+========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+.skill-card {
+    padding: 1.1rem 1.1rem 1rem;
+}
+
+.skill-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: .5rem;
+}
+
+.skill-name {
+    font-weight: 600;
+}
+
+.skill-level {
+    font-size: .8rem;
+    color: var(--text-muted);
+}
+
+/* barres */
 
 .progress-bar {
-    background-color: #444;
-    height: 10px;
-    border-radius: 5px;
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(31, 41, 55, 1);
     overflow: hidden;
+    margin-top: .3rem;
 }
 
 .progress {
     height: 100%;
-    border-radius: 5px;
-    transition: width 0.5s ease;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--accent), var(--accent-strong));
 }
 
-.html { width: 70%; background-color: #f44336; }
-.php { width: 30%; background-color: #ff9800; }
-.python { width: 25%; background-color: #9c27b0; }
-.ip { width: 75%; background-color: #2196f3; }
-.db { width: 50%; background-color: #4caf50; }
-.office { width: 80%; background-color: #009688; }
+/* cartes avec images (certifs / passions) */
 
-@media screen and (max-width: 768px) {
-    .competences {
-        grid-template-columns: 1fr 1fr;
-    }
+.card-thumb {
+    margin-bottom: .8rem;
 }
 
-@media screen and (max-width: 480px) {
-    .competences {
-        grid-template-columns: 1fr;
-    }
+.card-thumb img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
 }
 
-.A{
-    background-color: black;
-    opacity: 0.9;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 10px;
-    border-radius: 20px;
-    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
-    font-size: 20px;
-    line-height: 2;
+.card-meta {
+    font-size: .83rem;
+    color: var(--text-muted);
+    margin-bottom: .4rem;
 }
 
-.CV{
-    background-color: black;
-    opacity: 0.9;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 10px;
-    border-radius: 20px;
-    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
-    font-size: 20px;
-    line-height: 2;
-    margin-bottom: 100px;
-    text-align: center;
-}
- 
-.CVpdf{
-    color: aqua;
-}
-/*-------------------------------------------------------------------------------- Corp Projet -----------------------------------------------------------------------------------*/
+/* =========================
+   PROJETS
+========================= */
 
-.B{
-    background-color: black;
-    opacity: 0.9;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 10px;
-    border-radius: 20px;
-    animation: slideIn 1s ease-out forwards; /* Animation d'apparition */
-    font-size: 20px;
-    line-height: 2;
-    text-align: center;
-}
- 
-.C{
-    margin-bottom: 100px;
-}
-/*----------------------------------------------------------------------------- Corp Experience -----------------------------------------------------------------------------------*/
-
-/*Utilisation de css deja existant*/
-
-.V:hover{   
-    text-decoration:none;
-    color: white;
-    background-color: #333;
-    border-radius: 20px;  
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-.V{
-    color: aqua;
+.project-card h3 {
+    margin-bottom: .4rem;
 }
 
-/* Centrer le titre */
-.proxycom_title {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Agrandir l'image proxycom_hall */
-.box img.proxycom_hall {
-    width: 600px;   /* Plus large que les autres images */
-    height: auto;
-    margin-right: 10px;
-    margin-left: 10px;
-    border-radius: 20px;
-    transition: opacity 0.3s;
-    cursor: pointer; /* Pour montrer que c'est interactif */
-}
-
-/* Même effet au survol que les autres images */
-.box img.proxycom_hall:hover {
-    opacity: 0.7;
-}
-
-/* Faire passer le texte en bleu quand on survole l'image */
-.box img.proxycom_hall:hover + .proxycom_text,
-.box img.proxycom_hall:hover + .proxycom_text * {
-    color: aqua; /* Couleur bleu/vert similaire à ton style */
-    transition: color 0.3s;
-}
-
-/* Supprimer les puces des listes dans proxycom_text */
-.proxycom_text ul {
-    list-style: none;  /* Supprime les points par défaut */
-    padding-left: 0;   /* Supprime le retrait par défaut */
-    margin-left: 0;    /* Ajuste le décalage si nécessaire */
-}
-
-/* Optionnel : garde un petit espacement entre les éléments */
-.proxycom_text li {
-    margin-bottom: 10px;
-}
-/*-------------------------------------------------------------------------------- Crop VT -----------------------------------------------------------------------------------*/
-
-
-.VT {
+.project-tags {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:100px ;
-    margin-bottom: 100px;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin-bottom: .4rem;
 }
 
-.VT a {
+.tag {
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 999px;
+    padding: .15rem .55rem;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    color: var(--text-muted);
+}
+
+/* =========================
+   EXPÉRIENCES (timeline)
+========================= */
+
+.exp-timeline {
+    display: grid;
+    gap: 1.4rem;
+    margin-top: 1.6rem;
+}
+
+.exp-item {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+.exp-date {
+    font-size: .82rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--accent-strong);
+    margin-bottom: .25rem;
+}
+
+.exp-location {
+    font-size: .8rem;
+    color: var(--text-muted);
+}
+
+.exp-content h3 {
+    margin-bottom: .35rem;
+}
+
+.exp-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: .65rem;
+}
+
+.exp-content ul {
+    margin-left: 1.1rem;
+    margin-top: .3rem;
+    font-size: .9rem;
+}
+
+/* =========================
+   VEILLE TECHNO
+========================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    font-size: .8rem;
+    padding: .25rem .7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    color: var(--text-muted);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: 1.8rem;
+    margin-top: 1.5rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-size: .85rem;
+    margin-bottom: .25rem;
+    color: var(--text-muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    background: rgba(15, 23, 42, 0.95);
+    color: var(--text-main);
+    padding: .6rem .75rem;
+    font: inherit;
+    resize: vertical;
+    min-height: 46px;
+    transition: var(--transition);
+}
+
+.contact-form textarea {
+    min-height: 110px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.7);
+}
+
+.contact-list {
+    list-style: none;
+    margin-top: .7rem;
+    font-size: .93rem;
+}
+
+.contact-list li {
+    margin-bottom: .6rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-top: .6rem;
+}
+
+.social-pill {
+    font-size: .83rem;
+    padding: .3rem .7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: rgba(2, 6, 23, 0.95);
+    border-top: 1px solid rgba(148, 163, 184, 0.4);
+    padding: .9rem 1.5rem;
+    font-size: .82rem;
+    color: var(--text-muted);
+}
+
+.footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+}
+
+/* =========================
+   LIENS
+========================= */
+
+a {
+    color: var(--accent-strong);
     text-decoration: none;
-    color: white;
-    background-color: black;
-    opacity: 0.9;
-    border-radius: 20px;
-    padding: 40px 100px;
-    font-size: 35px;
+    transition: var(--transition);
 }
 
-.VT a:hover {
-    color: #333;
-    cursor: pointer;
-    background-color: aqua;
+a:hover {
+    opacity: .9;
 }
 
-/*------------------------------------------------------------------------- Corp Contact -----------------------------------------------------------------------------------*/
-.Coordonnees {
-    background-color: black;
-    opacity: 0.9;
-    padding: 5px;
-    margin: 150px 250px 100px;
-    border-radius: 20px;
-    font-size: 30px;
-    animation: slideIn 1s ease-out forwards;
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .6rem;
+    }
+    .nav-links {
+        justify-content: flex-start;
+    }
+
+    .section {
+        padding: 2.5rem 1.2rem 3rem;
+    }
+
+    .profile-layout,
+    .contact-grid,
+    .exp-item,
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
-h4 {
-    text-align: center;
-    text-decoration: underline;
-}
-
-.Coordonnees li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.iconRes {
-    width: 60px;
-    margin-right: 20px;
-}
-
-/*------------------------------------------------------------------------- Pied de page -----------------------------------------------------------------------------------*/
-
-footer {
-    text-align: center;
-    opacity: 0.9;
-    padding: 5px 0;
-    background-color: #333;
-    color: white;
-    width: 100%; 
-    line-height: 4%;
-}
-
-.mail{
-    color: aqua;
-}
-
-.num{
-    color: aqua;
-}
-
-.mail:hover{
-    color: white;
+@media (max-width: 540px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }

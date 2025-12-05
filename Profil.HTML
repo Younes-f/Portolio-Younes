@@ -1,82 +1,170 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Profil</title>
-        <link rel="stylesheet" href="Style.CSS">
-        <link rel="profil icon" href="Image/icon_profil.png">
-    </head>
-    <body>
-        <header>
-            <h1>Portfolio</h1>
-        </header>
-        <nav>
-            <a href="Accueil.HTML">Accueil</a> 
-            <a href="Profil.HTML">Profil</a>
-            <a href="Competences.HTML">Compétences</a>
-            <a href="Projet.HTML">Projets</a>
-            <a href="Experience.HTML">Expériences</a>
-            <a href="VT.HTML">Veille Technologique</a>
-            <a href="Contact.HTML">Contact</a>
-        </nav>
-        <main>
-            <h3>Présentation</h3>
-            <section class="Presentation">
-                <p>Salut, moi c'est Younes.</p>
-                <p>Actuellement étudiant en BTS SIO (services informatiques aux organisations) au <a href="https://www.lyceepergaud.fr/" alt ="lycee pergaud" class="V" target="_blank">lycée Louis Pergaud</a> à Besançon dans le Doubs.</p>
-                <p>Je suis passionné par l’informatique et les nouvelles technologies et je suis fasciné par tout ce qu’on peut faire avec un ordinateur : créer, apprendre, résoudre des problèmes, et même s’amuser.</p>
-                <p>Sur ce site, tu découvriras un peu tout ce que j’aime faire. J’ai appris à créer des sites web avec des outils comme HTML et CSS (ce sont comme des blocs pour construire des pages sur Internet).</p>
-            </section>
-            <h3>Formation</h3>
-            <section class="A">
-                <ul>
-                    <li><B>2025-2026</B> : Deuxiéme année BTS SIO (Service Informatique aux Oraganisation) option SISR en alternance, Lycée Louis Pergaud </li>
-                    <li><B>2024-2025</B> : Première année BTS SIO (Service Informatique aux Oraganisation), Lycée Louis Pergaud </li>
-                    <li><B>2023-2024</B> : Baccalauréat technologique STMG (sciences et technologies du management et de la gestion)
-                        Spécialité Mercatique (obtenu, mention assez bien),  Lycée les Haberges</li>
-                    <li><B>2021-2023</B> : Lycée les Haberges en premier technologique et preparation au bac de français (obtenu)</li>
-                    <li><B>2017-2021</B> : Collège public Jean Macé. Obtention du Brevet des Collèges (obtenu, mention Bien)</li>     
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Portfolio Younes FARCHICH</title>
+    <link href="Style.css" rel="stylesheet">
+    <link rel="icon" href="Image/icon_profil.png">
+</head>
+<body>
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">YOUNES FARCHICH</div>
+        <ul class="nav-links">
+            <li><a href="Accueil.HTML">Accueil</a></li>
+            <li><a href="Profil.HTML" class="active">Profil</a></li>
+            <li><a href="Competences.HTML">Compétences</a></li>
+            <li><a href="Projet.HTML">Projets</a></li>
+            <li><a href="Experience.HTML">Expériences</a></li>
+            <li><a href="VT.HTML">Veille Tech</a></li>
+            <li><a href="Contact.HTML">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <header class="page-header">
+        <h1 class="page-header-title">Mon profil</h1>
+        <p class="page-header-subtitle">
+            Un étudiant curieux, passionné par l’informatique, qui découvre le monde professionnel
+            à travers le BTS SIO option SISR et l’alternance chez Proxycom.
+        </p>
+    </header>
+
+    <section class="section">
+        <div class="grid grid-2 profile-layout">
+            <article class="card profile-bio">
+                <h2>Qui je suis</h2>
+                <p>
+                    Salut, moi c&rsquo;est <strong>Younes</strong>.
+                </p>
+                <p>
+                    Je suis actuellement étudiant en <strong>BTS SIO</strong> (Services Informatiques aux Organisations)
+                    au <a href="https://www.lyceepergaud.fr/" target="_blank">lycée Louis Pergaud</a> à Besançon.
+                    Je me spécialise dans l&rsquo;option <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux).
+                </p>
+                <p>
+                    J&rsquo;ai toujours été fasciné par ce qu’on peut faire avec un ordinateur : créer, apprendre,
+                    résoudre des problèmes et rendre le quotidien plus simple. Petit à petit, je me suis orienté
+                    vers l&rsquo;administration de réseaux, le déploiement de matériels et la sécurité des systèmes.
+                </p>
+                <p>
+                    Ce portfolio rassemble mes expériences en stage et en alternance, mes projets scolaires
+                    et les compétences que je développe au fil de mon parcours.
+                </p>
+            </article>
+
+            <aside class="card profile-aside">
+                <h2>Informations rapides</h2>
+                <ul class="info-list">
+                    <li><strong>Formation actuelle</strong><span>BTS SIO SISR – Lycée Louis Pergaud</span></li>
+                    <li><strong>Statut</strong><span>Étudiant en 2<sup>e</sup> année & alternant chez Proxycom</span></li>
+                    <li><strong>Localisation</strong><span>Vesoul & Besançon</span></li>
+                    <li><strong>Mobilité</strong><span>Permis B / mobilité régionale</span></li>
                 </ul>
-            </section>
-            <h3 class="titre">Mes Passions</h3>
-            <section class="placement">
-                 <div class="box">
-                 <img src="Image/sport.jpg" alt="image de sport">
-                <p>
-                    <B>● Sport ●</B><br>Le sport a toujours occupé une place centrale dans ma vie. C'est une activité qui offre de nombreux avantages, tant sur le plan physique que mental.
-                </p>
-                 </div>
-                <div class="box">
-                <img src="Image/voyage.jpg" alt="image de voyage">
-                <p>
-                    <B>● Voyager ●</B><br>Depuis petit, j'adore voyager ! Pour moi, chaque voyage est comme une grande aventure,
-                    où je peux découvrir de nouveaux endroits, rencontrer des gens intéressants et voir des paysages magnifiques.
-                    Au cours de ma vie j'ai eu la chance de voyager dans de nombreux pays notamment en Europe.
-                </p>
-                </div>
-                <div class="box">
-                <img src="Image/merco.jpg" alt="image d'automobile">
-                <p>
-                    <B>● Automobile ●</B><br>Depuis mon plus jeune âge, l'automobile a toujours occupé une place spéciale dans ma vie. Chaque voiture, avec son design unique et son histoire, m'inspire énormément. 
-                    Pour moi, les automobiles ne sont pas seulement des moyens de transport, mais de véritables œuvres d'art sur roues.
-                </p>
-                 </div>
-                <div class="box">
-                <img src="Image/info.png" alt="image d'informatique">
-                <p>
-                    <B>● Informatique ●</B><br>l'informatique a toujours été un domaine qui m'a fasciné. Mon intérêt a commencé avec des jeux vidéo, mais rapidement, 
-                    j'ai voulu en savoir plus sur ce qui se cachait derrière ces mondes virtuels. C'est donc pour ça que j'ai choisi cette filière, le BTS SIO.
-                </p>
-                </div>
-            </section>
-        </main>
-        
+            </aside>
+        </div>
+    </section>
 
-        <footer>
-            <p>© 2024 FARCHICH Younes. Tous droits réservés.</p>
-            <p>Email : <a href="mailto:Younes.f26@outlook.fr" class="mail" >Younes.f26@outlook.fr</a></p>
-            <p>Numéro : <a class="num" >07 67 06 68 68</a></p>
-        </footer>
+    <section class="section">
+        <div class="card">
+            <h2>Parcours scolaire</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2025 - 2026</div>
+                    <div class="timeline-title">BTS SIO – 2<sup>e</sup> année (SISR)</div>
+                    <div class="timeline-place">Lycée Louis Pergaud – Besançon (en alternance Proxycom)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024 - 2025</div>
+                    <div class="timeline-title">BTS SIO – 1<sup>re</sup> année</div>
+                    <div class="timeline-place">Lycée Louis Pergaud – Besançon</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023 - 2024</div>
+                    <div class="timeline-title">Baccalauréat technologique STMG</div>
+                    <div class="timeline-place">Spécialité Mercatique – Lycée Les Haberges, Vesoul (mention Assez bien)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2021 - 2023</div>
+                    <div class="timeline-title">Première & Terminale STMG</div>
+                    <div class="timeline-place">Lycée Les Haberges – Vesoul</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2017 - 2021</div>
+                    <div class="timeline-title">Collège Jean Macé</div>
+                    <div class="timeline-place">Obtention du Brevet des Collèges (mention Bien)</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </body>
+    <section class="section">
+        <div class="section-intro">
+            <h2>Ce qui me passionne</h2>
+            <p class="text-muted">
+                En dehors des études, plusieurs centres d’intérêt me permettent d&rsquo;équilibrer vie perso,
+                sport et technologie.
+            </p>
+        </div>
+
+        <div class="skills-grid">
+            <article class="card skill-card">
+                <div class="card-thumb">
+                    <img src="Image/sport.jpg" alt="Sport">
+                </div>
+                <h3>Sport</h3>
+                <p class="text-muted">
+                    Le sport est essentiel pour moi : il m’aide à garder une bonne hygiène de vie, à travailler
+                    le mental et à développer l’esprit d’équipe.
+                </p>
+            </article>
+
+            <article class="card skill-card">
+                <div class="card-thumb">
+                    <img src="Image/voyage.jpg" alt="Voyage">
+                </div>
+                <h3>Voyager</h3>
+                <p class="text-muted">
+                    J’aime découvrir de nouveaux endroits, de nouvelles cultures et sortir de ma zone de confort
+                    lors de chaque voyage.
+                </p>
+            </article>
+
+            <article class="card skill-card">
+                <div class="card-thumb">
+                    <img src="Image/merco.jpg" alt="Automobile">
+                </div>
+                <h3>Automobile</h3>
+                <p class="text-muted">
+                    Les voitures me passionnent depuis longtemps : design, mécanique, nouvelles technologies embarquées…
+                    c’est un domaine qui m’inspire beaucoup.
+                </p>
+            </article>
+
+            <article class="card skill-card">
+                <div class="card-thumb">
+                    <img src="Image/info.png" alt="Informatique">
+                </div>
+                <h3>Informatique</h3>
+                <p class="text-muted">
+                    Je suis parti des jeux vidéo, puis j’ai voulu comprendre « ce qu’il y a derrière » :
+                    réseaux, systèmes, sécurité, scripts… C’est ce qui m’a amené vers le BTS SIO SISR.
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <p>&copy; 2025 Younes FARCHICH. Tous droits réservés.</p>
+        <div class="footer-links">
+            <span>Email : <a href="mailto:Younes.f26@outlook.fr">Younes.f26@outlook.fr</a></span>
+            <span>Téléphone : <a href="tel:+33767066868">07 67 06 68 68</a></span>
+        </div>
+    </div>
+</footer>
+</body>
 </html>

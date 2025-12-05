@@ -1,36 +1,157 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Accueil</title>
-        <link href="Style.CSS" rel="stylesheet">
-        <link rel="Accueil icon" href="Image/icon_acceuil.png">
-    </head>
-    <body>
-        <header>
-            <h1>Portfolio</h1>
-        </header>
-        <nav>
-            <a href="Accueil.HTML">Accueil</a> 
-            <a href="Profil.HTML">Profil</a>
-            <a href="Competences.HTML">Compétences</a>
-            <a href="Projet.HTML">Projets</a>
-            <a href="Experience.HTML">Expériences</a>
-            <a href="VT.HTML">Veille Technologique</a>
-            <a href="Contact.HTML">Contact</a>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Younes FARCHICH - BTS SIO SISR">
+    <title>Accueil - Portfolio Younes FARCHICH</title>
+    <link href="Style.css" rel="stylesheet">
+    <link rel="icon" href="Image/icon_acceuil.png">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">YOUNES FARCHICH</div>
+            <ul class="nav-links">
+                <li><a href="Accueil.HTML" class="active">Accueil</a></li>
+                <li><a href="Profil.HTML">Profil</a></li>
+                <li><a href="Competences.HTML">Compétences</a></li>
+                <li><a href="Projet.HTML">Projets</a></li>
+                <li><a href="Experience.HTML">Expériences</a></li>
+                <li><a href="VT.HTML">Veille Tech</a></li>
+                <li><a href="Contact.HTML">Contact</a></li>
+            </ul>
         </nav>
-       
-        <main>
-            <h2>Younes FARCHICH</h2>
-            <h3>BTS SIO (services informatiques aux organisations), Option SISR.<br>
-            Bienvenue dans mon Portfolio.</h3>
-        </main>
-        
-        <footer>
-            <p>© 2024 FARCHICH Younes. Tous droits réservés.</p>
-            <p>Email : <a href="mailto:Younes.f26@outlook.fr" class="mail" >Younes.f26@outlook.fr</a></p>
-            <p>Numéro : <a class="num" >07 67 06 68 68</a></p>
-        </footer>
+    </header>
 
-    </body>
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div>
+                    <div class="hero-badge">
+                        <span></span>
+                        Étudiant BTS SIO – Option SISR
+                    </div>
+
+                    <h1 class="hero-title">Construire, sécuriser et faire évoluer les réseaux d&rsquo;entreprise.</h1>
+                    <p class="hero-subtitle">Younes FARCHICH – Futur technicien systèmes & réseaux</p>
+
+                    <p class="hero-text">
+                        Actuellement en BTS Services Informatiques aux Organisations, je me spécialise dans 
+                        l&rsquo;administration de réseaux, la mise en place d&rsquo;infrastructures et la sécurité 
+                        des systèmes. Ce portfolio présente mon parcours, mes projets et mes expériences en entreprise.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="Attestation_Diplome/CV.pdf" target="_blank" class="btn btn-primary">Télécharger mon CV</a>
+                        <a href="Projet.HTML" class="btn btn-ghost">Découvrir mes projets</a>
+                    </div>
+
+                    <div class="hero-tags">
+                        <span class="hero-tag">Réseaux &amp; Systèmes</span>
+                        <span class="hero-tag">MikroTik &amp; Winbox</span>
+                        <span class="hero-tag">Active Directory</span>
+                        <span class="hero-tag">Alternance Proxycom</span>
+                    </div>
+                </div>
+
+                <aside class="hero-photo-card">
+                    <!-- À REMPLACER par une vraie photo : Image/younes_profil.jpg -->
+                    <img src="Image/younes_profil.jpg" alt="Photo de Younes FARCHICH" class="hero-photo">
+                    <div class="hero-highlight">
+                        <div>
+                            <span class="stat-number">BTS SIO</span>
+                            <div class="stat-caption">Option SISR</div>
+                        </div>
+                        <div>
+                            <span class="stat-number">Proxycom</span>
+                            <div class="stat-caption">Alternance 2025–2026</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="section">
+            <div class="section-intro">
+                <h2>Mon impact en chiffres</h2>
+                <p class="text-muted">
+                    Quelques repères pour résumer mon parcours actuel en tant qu&rsquo;étudiant et alternant dans le domaine des réseaux.
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Années de BTS</div>
+                    <p class="stat-caption">BTS SIO option SISR au lycée Louis Pergaud.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+10</div>
+                    <div class="stat-label">Projets</div>
+                    <p class="stat-caption">Réseau, système, Active Directory, déploiement d’équipements.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Attestations</div>
+                    <p class="stat-caption">MOOC CNIL, MOOC ANSSI, PIX, ASSR2, JDC.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Motivation</div>
+                    <p class="stat-caption">Envie d’apprendre, de progresser et de contribuer à des projets concrets.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALEUR AJOUTÉE -->
+        <section class="section">
+            <div class="section-intro">
+                <h2>Ce que je peux apporter à votre entreprise</h2>
+                <p class="text-muted">
+                    Grâce à mon BTS SIO SISR et à mon alternance chez Proxycom, je combine compétences techniques,
+                    sens du service et rigueur sur le terrain.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <article class="card">
+                    <h3>Réseaux &amp; infrastructure</h3>
+                    <p class="text-muted">
+                        Mise en place d’adressage IP, configuration de routeurs MikroTik, déploiement de bornes Wi-Fi
+                        et gestion des connexions sur site client.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Organisation &amp; autonomie</h3>
+                    <p class="text-muted">
+                        Préparation et envoi de matériel, suivi logistique, installation d’équipements dans des délais
+                        serrés et respect des consignes de sécurité.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Esprit d’équipe</h3>
+                    <p class="text-muted">
+                        Travail avec les techniciens réseaux, les commerciaux et les clients finaux pour
+                        assurer une installation propre, fonctionnelle et documentée.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2025 Younes FARCHICH. Tous droits réservés.</p>
+            <div class="footer-links">
+                <span>Email : <a href="mailto:Younes.f26@outlook.fr">Younes.f26@outlook.fr</a></span>
+                <span>Téléphone : <a href="tel:+33767066868">07 67 06 68 68</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
