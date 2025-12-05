@@ -160,6 +160,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const titles = document.querySelectorAll(".page-header-title");
+  const typingSpeed = 60; // ms par caractère — baisse pour accélérer, augmente pour ralentir
+  const initialDelay = 200; // délai avant de commencer (ms)
+
+  titles.forEach((titleElem) => {
+    const fullText = titleElem.textContent.trim();
+    if (!fullText) return;
+
+    titleElem.textContent = "";               // vide le titre
+    titleElem.classList.add("typewriter");    // ajoute la classe CSS qui contient ::after (curseur)
+
+    let i = 0;
+    function typeNext() {
+      if (i <= fullText.length) {
+        // on remet le texte partiel (évite les problèmes avec HTML)
+        titleElem.textContent = fullText.slice(0, i);
+        i++;
+        setTimeout(typeNext, typingSpeed);
+      } else {
+        // fin de la frappe : on peut garder le curseur ou le retirer
+        // Pour garder le curseur clignotant laissez tel quel.
+        // Si tu veux retirer le curseur après un moment, décommente ci-dessous :
+        // setTimeout(() => titleElem.classList.remove("typewriter"), 900);
+      }
+    }
+
+    setTimeout(typeNext, initialDelay + Math.random() * 250); // petit délai aléatoire si plusieurs titres
+  });
+});
+</script>
 
 </body>
 </html>
