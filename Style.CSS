@@ -604,6 +604,46 @@ h4 {
     font-size: .86rem;
     color: var(--text-muted);
 }
+.quick-info-card {
+    background: #0f1c2f; /* bleu foncé moderne */
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 2rem auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quick-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.quick-info-card h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00bfff;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.info-row .label {
+    font-weight: 600;
+    color: #a0c4ff;
+}
+
+.info-row .value {
+    text-align: right;
+    color: #ffffff;
+}
 
 /* =========================
    COMPÉTENCES
