@@ -8,7 +8,7 @@
     <link rel="icon" href="Image/icon_competence.png">
 </head>
 <body>
-<header class="header">
+<header class="header" id="mainNav">
     <nav class="navbar">
         <div class="logo">YOUNES FARCHICH</div>
         <ul class="nav-links">
@@ -35,7 +35,7 @@
     <!-- HERO COMPETENCES -->
     <section class="section">
         <div class="grid skills-hero-grid">
-            <article class="card">
+            <article class="card reveal" style="border-top:2px solid var(--a);">
                 <h2>Mon profil technique</h2>
                 <p class="text-muted">
                     Je me positionne comme un futur <strong>technicien systèmes &amp; réseaux</strong>, capable de
@@ -47,7 +47,6 @@
                     situations réelles : diagnostic sur site, câblage, déploiement d'équipements et accompagnement
                     des clients dans la résolution de leurs problèmes de connectivité.
                 </p>
-
                 <div class="chips-row">
                     <span class="chip">Adressage IP</span>
                     <span class="chip">MikroTik &amp; Winbox</span>
@@ -56,339 +55,207 @@
                     <span class="chip">Câblage RJ11 / RJ45</span>
                     <span class="chip">Routeurs 4G/5G</span>
                     <span class="chip">Affichage dynamique</span>
-                    <span class="chip">Support &amp; intervention terrain</span>
+                    <span class="chip">Support terrain</span>
                 </div>
             </article>
 
-            <aside class="card skills-stats-card">
+            <aside class="card skills-stats-card reveal reveal-d2">
                 <h3>Aperçu rapide</h3>
                 <div class="skills-stats-grid">
-                    <div>
-                        <div class="stat-number">Réseau</div>
-                        <div class="stat-label">Adressage, routage, VLAN, Wi-Fi</div>
-                    </div>
-                    <div>
-                        <div class="stat-number">Terrain</div>
-                        <div class="stat-label">Diagnostic, déploiement, câblage</div>
-                    </div>
-                    <div>
-                        <div class="stat-number">Télécom</div>
-                        <div class="stat-label">PBX, FXS, provisioning</div>
-                    </div>
-                    <div>
-                        <div class="stat-number">Systèmes</div>
-                        <div class="stat-label">Windows, AD, mode kiosque</div>
-                    </div>
+                    <div><div class="stat-number">Réseau</div><div class="stat-label">Adressage, routage, VLAN, Wi-Fi</div></div>
+                    <div><div class="stat-number">Terrain</div><div class="stat-label">Diagnostic, déploiement, câblage</div></div>
+                    <div><div class="stat-number">Télécom</div><div class="stat-label">PBX, FXS, provisioning</div></div>
+                    <div><div class="stat-number">Systèmes</div><div class="stat-label">Windows, AD, mode kiosque</div></div>
                 </div>
             </aside>
         </div>
     </section>
 
+    <div class="divider"><div class="divider-line"></div></div>
+
     <!-- COMPÉTENCES TECHNIQUES -->
     <section class="section">
-        <div class="section-intro">
+        <div class="section-intro reveal">
             <h2>Compétences techniques</h2>
-            <p class="text-muted">
-                Un résumé des domaines sur lesquels je travaille, avec une estimation de mon niveau
-                et des exemples concrets d'utilisation en entreprise et en formation.
-            </p>
+            <p class="text-muted">Niveaux évalués par la pratique réelle en entreprise et en formation.</p>
         </div>
 
-        <div class="grid grid-3 skills-groups">
-            <!-- Réseau & Infrastructure -->
-            <article class="card">
+        <div class="grid grid-3">
+            <!-- Réseaux & Infrastructure -->
+            <article class="card card-top-a reveal reveal-d1">
                 <h3>Réseaux &amp; infrastructure</h3>
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Adressage IP / Réseau</span>
-                        <span class="skill-level">75%</span>
-                    </div>
-                    <p class="text-muted">Plan d'adressage, sous-réseaux, configuration de routeurs, VLAN.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
+                    <div><div class="skill-name">Adressage IP / VLAN</div><p class="text-muted" style="font-size:.78rem;margin:0;">Plans d'adressage, sous-réseaux, segmentation</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Routeurs &amp; connectivité</span>
-                        <span class="skill-level">65%</span>
-                    </div>
-                    <p class="text-muted">MikroTik/Winbox, routeurs 4G/5G, Starlink, diagnostic de connectivité.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 65%;"></div>
-                    </div>
+                    <div><div class="skill-name">Routeurs &amp; connectivité</div><p class="text-muted" style="font-size:.78rem;margin:0;">MikroTik, 4G/5G, Starlink, diagnostic</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Téléphonie IP &amp; câblage</span>
-                        <span class="skill-level">55%</span>
-                    </div>
-                    <p class="text-muted">PBX, FXS, VLAN téléphonie, câblage RJ11/RJ45, provisioning de terminaux.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 55%;"></div>
-                    </div>
+                    <div><div class="skill-name">Téléphonie IP &amp; câblage</div><p class="text-muted" style="font-size:.78rem;margin:0;">PBX, FXS, VLAN téléphonie, RJ11/RJ45</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Active Directory / Windows Server</span>
-                        <span class="skill-level">En cours</span>
-                    </div>
-                    <p class="text-muted">Contrôleur de domaine, utilisateurs, OU, GPO, partages.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 45%;"></div>
-                    </div>
+                    <div><div class="skill-name">Active Directory</div><p class="text-muted" style="font-size:.78rem;margin:0;">Contrôleur de domaine, GPO, partages</p></div>
+                    <span class="skill-level lv-prog">En progression</span>
                 </div>
             </article>
 
             <!-- Déploiement & terrain -->
-            <article class="card">
+            <article class="card card-top-b reveal reveal-d2">
                 <h3>Déploiement &amp; terrain</h3>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Affichage dynamique</span>
-                        <span class="skill-level">70%</span>
-                    </div>
-                    <p class="text-muted">Écrans ViewSonic, Touchify, écrans interactifs, installation et mise en service.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 70%;"></div>
-                    </div>
+                    <div><div class="skill-name">Affichage dynamique</div><p class="text-muted" style="font-size:.78rem;margin:0;">Touchify, ViewSonic, écrans interactifs</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Préparation matériel</span>
-                        <span class="skill-level">75%</span>
-                    </div>
-                    <p class="text-muted">Mini PC, mode kiosque Windows, totems, configuration avant déploiement.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
+                    <div><div class="skill-name">Préparation matériel</div><p class="text-muted" style="font-size:.78rem;margin:0;">Mini PC, mode kiosque, totems</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Diagnostic &amp; intervention</span>
-                        <span class="skill-level">65%</span>
-                    </div>
-                    <p class="text-muted">Analyse de pannes, dépannage sur site, adaptation aux contraintes client.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 65%;"></div>
-                    </div>
+                    <div><div class="skill-name">Diagnostic &amp; intervention</div><p class="text-muted" style="font-size:.78rem;margin:0;">Analyse de pannes, dépannage sur site</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Support &amp; relation client</span>
-                        <span class="skill-level">Fort</span>
-                    </div>
-                    <p class="text-muted">Communication avec les utilisateurs, accompagnement, travail en équipe.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
+                    <div><div class="skill-name">Support &amp; relation client</div><p class="text-muted" style="font-size:.78rem;margin:0;">Communication, accompagnement, équipe</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
             </article>
 
             <!-- Développement & outils -->
-            <article class="card">
+            <article class="card card-top-c reveal reveal-d3">
                 <h3>Développement &amp; outils</h3>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">HTML / CSS</span>
-                        <span class="skill-level">70%</span>
-                    </div>
-                    <p class="text-muted">Création de sites vitrines et de portfolios responsives.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 70%;"></div>
-                    </div>
+                    <div><div class="skill-name">HTML / CSS</div><p class="text-muted" style="font-size:.78rem;margin:0;">Sites vitrines, portfolios responsives</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">PHP / Python</span>
-                        <span class="skill-level">30%</span>
-                    </div>
-                    <p class="text-muted">Notions de base, scripts simples, logique de programmation.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 30%;"></div>
-                    </div>
+                    <div><div class="skill-name">PHP / Python</div><p class="text-muted" style="font-size:.78rem;margin:0;">Notions de base, scripts simples</p></div>
+                    <span class="skill-level lv-base">Notions</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Microsoft Office / 365</span>
-                        <span class="skill-level">80%</span>
-                    </div>
-                    <p class="text-muted">Word, Excel, PowerPoint pour rédiger, analyser et présenter.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
+                    <div><div class="skill-name">Microsoft Office / 365</div><p class="text-muted" style="font-size:.78rem;margin:0;">Word, Excel, PowerPoint</p></div>
+                    <span class="skill-level lv-done">Pratiqué</span>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-card-header">
-                        <span class="skill-name">Bases de données</span>
-                        <span class="skill-level">50%</span>
-                    </div>
-                    <p class="text-muted">Modélisation simple, requêtes SQL de base.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 50%;"></div>
-                    </div>
+                    <div><div class="skill-name">Bases de données</div><p class="text-muted" style="font-size:.78rem;margin:0;">Modélisation, requêtes SQL de base</p></div>
+                    <span class="skill-level lv-prog">En progression</span>
                 </div>
             </article>
         </div>
     </section>
 
+    <div class="divider"><div class="divider-line"></div></div>
+
     <!-- CERTIFICATIONS -->
     <section class="section credentials-section">
-        <div class="section-intro">
+        <div class="section-intro reveal">
             <h2>Certifications &amp; attestations</h2>
-            <p class="text-muted">
-                Des validations officielles de mes connaissances en <strong>cybersécurité</strong>,
-                <strong>protection des données</strong> et <strong>compétences numériques</strong>.
-            </p>
+            <p class="text-muted">Des validations officielles en cybersécurité, protection des données et compétences numériques.</p>
         </div>
 
         <div class="credentials-grid">
-            <article class="card credential-card">
+            <article class="card credential-card reveal reveal-d5">
+                    <div class="credential-header">
+                    <span class="credential-badge">Compétences numériques</span>
+                    <h3>Certification PIX</h3>
+                    <p class="credential-meta">15/01/2026 – Score : 420 PIX</p>
+                </div>
+                <p class="text-muted">
+                Nouvelle certification PIX validant un niveau avancé en compétences numériques :
+                cybersécurité, environnement numérique, résolution de problèmes et maîtrise des outils digitaux.
+                </p>
+                <div class="credential-footer">
+                <a href="Attestation_Diplome/certification-pix-2026.pdf" target="_blank" class="btn btn-primary">
+                Voir l'attestation
+                </a>
+                </div>
+            </article>
+            <article class="card credential-card reveal reveal-d1">
                 <div class="credential-header">
                     <span class="credential-badge">Protection des données</span>
                     <h3>MOOC CNIL</h3>
-                    <p class="credential-meta">20/11/2024 – Lycée Louis Pergaud, Besançon</p>
+                    <p class="credential-meta">28/11/2024 – 5 modules – Score : 100%</p>
                 </div>
-                <p class="text-muted">
-                    Sensibilisation au RGPD, aux droits des personnes, aux responsabilités des organisations
-                    et aux bonnes pratiques pour manipuler des données personnelles.
-                </p>
-                <div class="credential-footer">
-                    <a href="Attestation_Diplome/MOOC_CNIL.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a>
-                </div>
+                <p class="text-muted">Sensibilisation au RGPD, droits des personnes, responsabilités des acteurs, DPO et collectivités territoriales.</p>
+                <div class="credential-footer"><a href="Attestation_Diplome/MOOC_CNIL.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a></div>
             </article>
 
-            <article class="card credential-card">
+            <article class="card credential-card reveal reveal-d2">
                 <div class="credential-header">
                     <span class="credential-badge">Cybersécurité</span>
                     <h3>MOOC ANSSI</h3>
-                    <p class="credential-meta">05/12/2024 – Lycée Louis Pergaud, Besançon</p>
+                    <p class="credential-meta">21/11/2024 – 4 modules – Score : 100%</p>
                 </div>
-                <p class="text-muted">
-                    Introduction à la sécurité des systèmes d'information : menaces, bonnes pratiques,
-                    protection des postes, des réseaux et des données.
-                </p>
-                <div class="credential-footer">
-                    <a href="Attestation_Diplome/AttestationMooc.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a>
-                </div>
+                <p class="text-muted">Panorama SSI, sécurité de l'authentification, sécurité sur Internet, sécurité du poste de travail et nomadisme.</p>
+                <div class="credential-footer"><a href="Attestation_Diplome/AttestationMooc.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a></div>
             </article>
 
-            <article class="card credential-card">
+            <article class="card credential-card reveal reveal-d3">
                 <div class="credential-header">
                     <span class="credential-badge">Compétences numériques</span>
                     <h3>Certification PIX</h3>
-                    <p class="credential-meta">07/03/2023 – Lycée Les Haberges, Vesoul</p>
+                    <p class="credential-meta">11/03/2024 – Score : 173 PIX</p>
                 </div>
-                <p class="text-muted">
-                    Validation de compétences sur le numérique : bureautique, web, collaboration en ligne,
-                    sécurité et culture numérique.
-                </p>
-                <div class="credential-footer">
-                    <a href="Attestation_Diplome/attestation_pix.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a>
-                </div>
+                <p class="text-muted">Validation de compétences numériques : informations, communication, création de contenu, protection, environnement numérique.</p>
+                <div class="credential-footer"><a href="Attestation_Diplome/attestation_pix.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a></div>
             </article>
 
-            <article class="card credential-card">
+            <article class="card credential-card reveal reveal-d4">
                 <div class="credential-header">
                     <span class="credential-badge">Sécurité routière</span>
                     <h3>ASSR2</h3>
                     <p class="credential-meta">23/06/2021 – Collège Jean Macé, Vesoul</p>
                 </div>
-                <p class="text-muted">
-                    Attestation scolaire de sécurité routière niveau 2, sur les règles et comportements à adopter.
-                </p>
-                <div class="credential-footer">
-                    <a href="Attestation_Diplome/ASSR2.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a>
-                </div>
+                <p class="text-muted">Attestation scolaire de sécurité routière niveau 2.</p>
+                <div class="credential-footer"><a href="Attestation_Diplome/ASSR2.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a></div>
             </article>
 
-            <article class="card credential-card">
+            <article class="card credential-card reveal">
                 <div class="credential-header">
                     <span class="credential-badge">Civisme</span>
                     <h3>Journée Défense et Citoyenneté</h3>
                     <p class="credential-meta">07/12/2023 – Base militaire, Luxeuil-les-Bains</p>
                 </div>
-                <p class="text-muted">
-                    Participation à la JDC, étape obligatoire du parcours de citoyenneté.
-                </p>
-                <div class="credential-footer">
-                    <a href="Attestation_Diplome/JDC.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a>
-                </div>
+                <p class="text-muted">Participation à la JDC, étape obligatoire du parcours de citoyenneté.</p>
+                <div class="credential-footer"><a href="Attestation_Diplome/JDC.pdf" target="_blank" class="btn btn-primary">Voir l'attestation</a></div>
             </article>
         </div>
     </section>
+
+    <div class="divider"><div class="divider-line"></div></div>
 
     <!-- DIPLÔMES & CV -->
     <section class="section">
         <div class="credentials-layout">
             <div class="credentials-column">
-                <h2>Diplômes</h2>
-
-                <article class="card diploma-card">
-                    <div class="diploma-header">
-                        <h3>Baccalauréat technologique STMG</h3>
-                        <span class="diploma-badge">2024</span>
-                    </div>
+                <h2 class="reveal">Diplômes</h2>
+                <article class="card diploma-card reveal">
+                    <div class="diploma-header"><h3>Baccalauréat technologique STMG</h3><span class="diploma-badge">2024</span></div>
                     <p class="credential-meta">Lycée Les Haberges, Vesoul – Mention Assez bien</p>
-                    <p class="text-muted">
-                        Série STMG, spécialité Mercatique. Ce diplôme m'a apporté des bases en gestion,
-                        marketing et économie, utiles pour comprendre le contexte des entreprises.
-                    </p>
-                    <div class="credential-footer">
-                        <a href="Attestation_Diplome/bac.pdf" target="_blank" class="btn btn-primary">Voir le diplôme</a>
-                    </div>
+                    <p class="text-muted">Spécialité Mercatique. Bases en gestion, marketing et économie.</p>
+                    <div class="credential-footer"><a href="Attestation_Diplome/bac.pdf" target="_blank" class="btn btn-primary">Voir le diplôme</a></div>
                 </article>
-
-                <article class="card diploma-card">
-                    <div class="diploma-header">
-                        <h3>Brevet des collèges</h3>
-                        <span class="diploma-badge">2021</span>
-                    </div>
+                <article class="card diploma-card reveal">
+                    <div class="diploma-header"><h3>Brevet des collèges</h3><span class="diploma-badge">2021</span></div>
                     <p class="credential-meta">Collège Jean Macé, Vesoul – Mention Bien</p>
-                    <p class="text-muted">
-                        Premier diplôme attestant de la validation du socle commun de connaissances
-                        et de compétences.
-                    </p>
-                    <div class="credential-footer">
-                        <a href="Attestation_Diplome/brevet.pdf" target="_blank" class="btn btn-primary">Voir le diplôme</a>
-                    </div>
+                    <p class="text-muted">Validation du socle commun de connaissances et de compétences.</p>
+                    <div class="credential-footer"><a href="Attestation_Diplome/brevet.pdf" target="_blank" class="btn btn-primary">Voir le diplôme</a></div>
                 </article>
             </div>
 
             <aside class="credentials-column">
-                <h2>Mon CV</h2>
-
-                <article class="card cv-highlight">
-                    <p class="cv-tagline">
-                        Vous souhaitez un aperçu rapide de mon profil avant un entretien ?
-                    </p>
-                    <p class="text-muted">
-                        Mon CV synthétise mes <strong>informations personnelles</strong>,
-                        <strong>compétences</strong>, <strong>expériences</strong> et
-                        <strong>formations</strong> sur une seule page, prêt à être consulté
-                        par un recruteur ou un jury.
-                    </p>
-
+                <h2 class="reveal">Mon CV</h2>
+                <article class="card cv-highlight reveal">
+                    <p class="cv-tagline">Vous souhaitez un aperçu rapide de mon profil avant un entretien ?</p>
+                    <p class="text-muted">Mon CV synthétise mes <strong>informations</strong>, <strong>compétences</strong>, <strong>expériences</strong> et <strong>formations</strong> sur une seule page.</p>
                     <ul class="cv-points">
                         <li>Format PDF, lisible facilement.</li>
                         <li>Mise en page claire et structurée.</li>
                         <li>Adapté pour les candidatures BTS, alternance, emploi.</li>
                     </ul>
-
-                    <a href="Attestation_Diplome/CV.pdf" target="_blank" class="btn btn-primary cv-button">
-                        Télécharger mon CV
-                    </a>
+                    <a href="Attestation_Diplome/CV.pdf" target="_blank" class="btn btn-primary cv-button">Télécharger mon CV</a>
                 </article>
             </aside>
         </div>
@@ -397,50 +264,21 @@
 
 <footer class="footer">
     <div class="footer-inner">
-        <p>&copy; 2025 Younes FARCHICH. Tous droits réservés.</p>
-        <div class="footer-links">
-            <span>Email : <a href="mailto:Younes.f26@outlook.fr">Younes.f26@outlook.fr</a></span>
-            <span>Téléphone : <a href="tel:+33767066868">07 67 06 68 68</a></span>
+        <div class="footer-cols">
+            <div><h4>Younes FARCHICH</h4><p>Alternant technicien réseau chez Proxycom.<br>BTS SIO SISR – Lycée Louis Pergaud, Besançon.</p><div class="footer-status"><span class="dot"></span> Disponible pour alternance &amp; emploi</div></div>
+            <div><h4>Contact</h4><p>Email : <a href="mailto:Younes.f26@outlook.fr">Younes.f26@outlook.fr</a><br>Tél : <a href="tel:+33767066868">07 67 06 68 68</a><br>GitHub : <a href="https://github.com/Younes-f" target="_blank">Younes-f</a></p></div>
+            <div><h4>Navigation</h4><p><a href="index.html">Accueil</a> · <a href="Profil.html">Profil</a> · <a href="Competences.html">Compétences</a><br><a href="Projets.html">Projets</a> · <a href="Experiences.html">Expériences</a> · <a href="veille.html">Veille</a></p></div>
         </div>
+        <div class="footer-bar"><span>&copy; 2025 Younes FARCHICH. Tous droits réservés.</span><span>Portfolio BTS SIO SISR</span></div>
     </div>
 </footer>
+
 <div id="particles"></div>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("particles");
-    if (!container) return;
-    const count = 55;
-    for (let i = 0; i < count; i++) {
-        const p = document.createElement("div");
-        p.classList.add("particle");
-        p.style.left = Math.random() * 100 + "vw";
-        p.style.animationDuration = (10 + Math.random() * 14) + "s";
-        p.style.animationDelay = (Math.random() * 10) + "s";
-        container.appendChild(p);
-    }
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const titles = document.querySelectorAll(".page-header-title");
-  const typingSpeed = 60;
-  const initialDelay = 200;
-  titles.forEach((titleElem) => {
-    const fullText = titleElem.textContent.trim();
-    if (!fullText) return;
-    titleElem.textContent = "";
-    titleElem.classList.add("typewriter");
-    let i = 0;
-    function typeNext() {
-      if (i <= fullText.length) {
-        titleElem.textContent = fullText.slice(0, i);
-        i++;
-        setTimeout(typeNext, typingSpeed);
-      }
-    }
-    setTimeout(typeNext, initialDelay + Math.random() * 250);
-  });
-});
+document.addEventListener("DOMContentLoaded",()=>{const c=document.getElementById("particles");for(let i=0;i<35;i++){const p=document.createElement("div");p.classList.add("particle");p.style.left=Math.random()*100+"vw";p.style.animationDuration=(14+Math.random()*18)+"s";p.style.animationDelay=(Math.random()*14)+"s";c.appendChild(p);}});
+(()=>{const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:"0px 0px -40px 0px"});document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));})();
+window.addEventListener("scroll",()=>{document.getElementById("mainNav").classList.toggle("scrolled",window.scrollY>50);});
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".page-header-title").forEach(el=>{const txt=el.textContent.trim();if(!txt)return;el.textContent="";el.classList.add("typewriter");let i=0;function t(){if(i<=txt.length){el.textContent=txt.slice(0,i);i++;setTimeout(t,50);}};setTimeout(t,300);});});
 </script>
 </body>
 </html>
