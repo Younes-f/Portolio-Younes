@@ -32,6 +32,7 @@
 .modal-section-title{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
   color:var(--a);margin-bottom:.35rem;display:flex;align-items:center;gap:.4rem;}
 .modal-section-title::before{content:"";width:3px;height:.9em;background:var(--a);border-radius:2px;}
+.modal-analysis .modal-section-title::before{background:var(--b);}
 .modal-section p,.modal-section li{color:var(--t2);font-size:.88rem;line-height:1.7;}
 .modal-section ul{margin-left:1.1rem;margin-top:.2rem;}
 .modal-section li{margin-bottom:.2rem;}
@@ -66,6 +67,14 @@
 }
 
 @media(max-width:600px){.modal-box{padding:1.4rem 1.2rem;}}
+
+/* E5 section highlight */
+.section-intro h2 .e5-badge{
+  display:inline-flex;align-items:center;gap:.35rem;font-size:.6em;font-weight:700;
+  padding:.2rem .7rem;border-radius:999px;vertical-align:middle;margin-left:.5rem;
+  background:linear-gradient(135deg,var(--a-dim),var(--b-dim));
+  border:1px solid rgba(6,214,160,0.2);color:var(--a);
+}
 </style>
 </head>
 <body>
@@ -136,30 +145,85 @@
         </div>
     </section>
 
+    <!-- ===== PRODUCTION ÉPREUVE E5 ===== -->
+    <section class="section">
+        <div class="section-intro reveal">
+            <h2>Production – Épreuve E5 <span class="e5-badge">BTS SIO SISR</span></h2>
+            <p class="text-muted">Deux situations professionnelles détaillées, réalisées en alternance chez Proxycom, présentées dans le cadre de l'épreuve E5 du BTS SIO SISR.</p>
+        </div>
+
+        <div class="grid grid-2">
+            <!-- SP1 – Salle de sport -->
+            <article class="card reveal reveal-d1 project-card-mini" data-project="salledesport" style="border-left:3px solid var(--a);cursor:pointer;">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;">
+                    <span style="font-size:1.4rem;">🏗️</span>
+                    <div>
+                        <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--a);">Situation professionnelle n°1</span>
+                    </div>
+                </div>
+                <h3 style="font-size:1.1rem;line-height:1.3;margin-bottom:.6rem;">Déploiement d'une infrastructure réseau complète – Salle de sport</h3>
+                <p class="text-muted" style="font-size:.86rem;">
+                    Infrastructure clé en main pour un nouveau client : 3 bornes Wi-Fi Zyxel, switch PoE, 
+                    séparation VLAN (personnel / invité), téléphonie fixe et téléphone pompier.
+                    Configuration complète via Nebula en autonomie.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.8rem;">
+                    <span class="tag">Zyxel Nebula</span><span class="tag">Wi-Fi</span><span class="tag">VLAN</span>
+                    <span class="tag">Switch PoE</span><span class="tag">Keeper</span><span class="tag">Téléphonie</span>
+                </div>
+                <span class="click-hint">⚡ Voir la situation complète</span>
+            </article>
+
+            <!-- SP2 – Jourdain -->
+            <article class="card reveal reveal-d2 project-card-mini" data-project="jourdain" style="border-left:3px solid var(--b);cursor:pointer;">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;">
+                    <span style="font-size:1.4rem;">📞</span>
+                    <div>
+                        <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--b);">Situation professionnelle n°2</span>
+                    </div>
+                </div>
+                <h3 style="font-size:1.1rem;line-height:1.3;margin-bottom:.6rem;">Remplacement complet d'un parc téléphonique – Client Jourdain</h3>
+                <p class="text-muted" style="font-size:.86rem;">
+                    Migration d'une infrastructure VoIP obsolète vers une solution moderne :
+                    PBX, switch PoE 24 ports, VLAN 12 téléphonie, 3 bornes DECT,
+                    provisioning SIP automatique de 16 terminaux.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.8rem;">
+                    <span class="tag">PBX</span><span class="tag">VLAN</span><span class="tag">SIP</span>
+                    <span class="tag">DECT</span><span class="tag">Switch PoE</span><span class="tag">Nebula</span>
+                </div>
+                <span class="click-hint">⚡ Voir la situation complète</span>
+            </article>
+        </div>
+    </section>
+
+    <div class="divider"><div class="divider-line"></div></div>
+
     <!-- ===== PROJET PHARE – SALLE DE SPORT ===== -->
     <section class="section">
         <article class="card project-showcase reveal project-card-mini" data-project="salledesport" style="border-top:2px solid var(--a);cursor:pointer;">
             <div class="project-showcase-media">
-                <div class="project-showcase-placeholder">Projet en cours</div>
+                <div class="project-showcase-placeholder">SP n°1 – E5</div>
             </div>
             <div class="project-showcase-content">
-                <span class="badge-soft">Projet phare en alternance</span>
+                <span class="badge-soft">Projet phare – Épreuve E5</span>
                 <h2>Déploiement réseau complet – Salle de sport (Lons-le-Saunier)</h2>
                 <p class="text-muted">
-                    Mise en place d'une infrastructure réseau complète pour un nouveau client :
-                    3 bornes Wi-Fi, switch PoE, téléphonie fixe, téléphone pompier.
-                    Configuration via Zyxel Nebula avec SSID sécurisé et Wi-Fi invité isolé.
+                    Infrastructure clé en main pour un nouveau client : 3 bornes Wi-Fi Zyxel configurées via Nebula,
+                    switch PoE, séparation VLAN (réseau personnel sécurisé + Wi-Fi invité isolé),
+                    téléphonie fixe et téléphone pompier. Préparation en autonomie en atelier,
+                    déploiement sur site avec un technicien confirmé.
                 </p>
                 <ul class="project-meta">
-                    <li><strong>Contexte :</strong> nouveau client nécessitant une infrastructure complète.</li>
-                    <li><strong>Rôle :</strong> configuration Nebula, déploiement Wi-Fi, téléphonie.</li>
-                    <li><strong>Statut :</strong> en cours de déploiement.</li>
+                    <li><strong>Contexte :</strong> nouveau client sans aucune infrastructure réseau ni téléphonique.</li>
+                    <li><strong>Rôle :</strong> configuration Nebula en autonomie, déploiement Wi-Fi, téléphonie, câblage RJ45.</li>
+                    <li><strong>Résultat :</strong> infrastructure livrée fonctionnelle, administrable à distance via Nebula.</li>
                 </ul>
                 <div class="project-tags">
-                    <span class="tag">Zyxel Nebula</span><span class="tag">Wi-Fi</span>
+                    <span class="tag">Zyxel Nebula</span><span class="tag">Wi-Fi</span><span class="tag">VLAN</span>
                     <span class="tag">Switch PoE</span><span class="tag">Téléphonie</span><span class="tag">Keeper</span>
                 </div>
-                <span class="click-hint">⚡ Voir les détails du projet</span>
+                <span class="click-hint">⚡ Voir la situation complète</span>
             </div>
         </article>
     </section>
@@ -193,8 +257,8 @@
 
                 <article class="project-card-mini reveal" data-project="salledesport">
                     <header class="project-card-header"><h3>Déploiement réseau – Salle de sport</h3><span class="pill-outline">Alternance</span></header>
-                    <p class="text-muted">Infrastructure complète : bornes Wi-Fi Zyxel, switch PoE, téléphonie fixe et configuration Nebula.</p>
-                    <div class="project-tags"><span class="tag">Nebula</span><span class="tag">Wi-Fi</span><span class="tag">PoE</span></div>
+                    <p class="text-muted">Infrastructure réseau complète : 3 bornes Wi-Fi Zyxel, switch PoE, VLAN, téléphonie et configuration Nebula en autonomie.</p>
+                    <div class="project-tags"><span class="tag">Nebula</span><span class="tag">Wi-Fi</span><span class="tag">PoE</span><span class="tag">VLAN</span></div>
                     <span class="click-hint">⚡ Voir les détails</span>
                 </article>
             </div>
@@ -204,8 +268,8 @@
 
                 <article class="project-card-mini reveal" data-project="jourdain">
                     <header class="project-card-header"><h3>Parc téléphonique – Client Jourdain</h3><span class="pill-outline">Alternance</span></header>
-                    <p class="text-muted">Remplacement complet d'un parc téléphonique : PBX, switch PoE, VLAN 12, 3 bornes DECT et provisioning de 16 terminaux.</p>
-                    <div class="project-tags"><span class="tag">PBX</span><span class="tag">VLAN</span><span class="tag">Téléphonie IP</span><span class="tag">DECT</span></div>
+                    <p class="text-muted">Migration complète d'un parc téléphonique obsolète : PBX, switch PoE 24 ports, VLAN 12, 3 bornes DECT, provisioning SIP de 16 terminaux.</p>
+                    <div class="project-tags"><span class="tag">PBX</span><span class="tag">VLAN</span><span class="tag">Téléphonie IP</span><span class="tag">DECT</span><span class="tag">SIP</span></div>
                     <span class="click-hint">⚡ Voir les détails</span>
                 </article>
 
@@ -395,24 +459,46 @@ const projectsData = {
     result: "Écran de nouveau pleinement opérationnel et synchronisé avec la plateforme."
   },
   jourdain: {
-    title: "Parc téléphonique – Client Jourdain",
-    tags: ["PBX","VLAN","Switch PoE","Téléphonie IP","Nebula","DECT","Travail en équipe"],
+    title: "Remplacement complet d'un parc téléphonique – Client Jourdain",
+    tags: ["PBX","VLAN","Switch PoE","Téléphonie IP","Nebula","DECT","SIP","Provisioning","Travail en équipe"],
     sections: [
-      {label:"Contexte", text:"Remplacement complet du parc téléphonique d'une entreprise nécessitant une préparation technique approfondie."},
-      {label:"Préparation", list:[
-        "Configuration de 12 téléphones fixes",
-        "Configuration de 4 téléphones sans fil",
-        "Préparation de 3 bornes DECT pour couvrir les zones dédiées aux téléphones sans fil",
-        "Création des comptes utilisateurs sur le PBX",
-        "Mise en place de groupes de réponse"
+      {label:"Contexte", text:"Le client Jourdain, une PME d'une dizaine de postes, disposait d'une ancienne infrastructure VoIP devenue obsolète : terminaux vétustes, fonctionnalités limitées et maintenance difficile. Il souhaitait migrer vers une solution moderne et administrable à distance, tout en conservant les fonctionnalités essentielles : groupes de réponse, transferts d'appels et messagerie vocale."},
+      {label:"Objectifs", list:[
+        "Configurer le PBX pour 12 téléphones fixes et 4 téléphones sans fil",
+        "Créer les comptes utilisateurs, les lignes et les groupes de réponse",
+        "Déployer un switch PoE 24 ports pour alimenter les terminaux IP",
+        "Mettre en place un VLAN dédié à la téléphonie (VLAN 12) pour isoler le trafic voix",
+        "Préparer 3 bornes DECT pour la couverture radio des sans-fil",
+        "Provisionner l'ensemble des terminaux à distance"
       ]},
-      {label:"Configuration réseau", list:[
-        "Configuration d'un switch PoE 24 ports",
-        "Mise en place du VLAN 12 dédié à la téléphonie",
-        "Configuration via Zyxel Nebula"
+      {label:"Organisation", text:"Mission réalisée principalement en atelier, en binôme avec un technicien confirmé. J'ai contribué activement à toute la phase de préparation : l'objectif était que le technicien puisse se rendre chez le client avec des équipements entièrement configurés et testés, sans manipulation complexe sur place."},
+      {label:"Outils &amp; technologies", list:[
+        "Serveur PBX dédié (administré à distance depuis Proxycom)",
+        "Switch PoE Zyxel 24 ports",
+        "Zyxel Nebula – configuration VLAN",
+        "12 téléphones IP fixes",
+        "4 téléphones sans fil + 3 bornes DECT",
+        "Protocole SIP pour le provisioning"
+      ]},
+      {label:"Phase 1 – Configuration du PBX", text:"Le PBX est le cœur de l'infrastructure téléphonique : il gère tous les appels entrants, sortants et internes. On a créé les 16 comptes utilisateurs avec pour chacun un numéro de poste interne, un mot de passe SIP et des droits d'appel. Les groupes de réponse ont été paramétrés selon les besoins du client : standard, service commercial et direction. Ces groupes distribuent les appels entrants vers plusieurs postes simultanément, évitant les appels manqués."},
+      {label:"Phase 2 – Configuration réseau &amp; VLAN", text:"La création d'un VLAN dédié à la téléphonie répond à deux enjeux majeurs. La qualité de service (QoS) : en séparant le trafic voix du trafic données, les paquets audio sont traités en priorité, ce qui évite les coupures et dégradations sonores. La sécurité : un VLAN voix isolé réduit la surface d'attaque et empêche l'écoute non autorisée du trafic téléphonique."},
+      {label:"Configuration VLAN", list:[
+        "VLAN 12 configuré sur le switch PoE via Zyxel Nebula",
+        "Ports téléphoniques en mode access VLAN 12",
+        "Ports réseau data en mode trunk"
+      ]},
+      {label:"Phase 3 – Provisioning des terminaux", text:"Le provisioning consiste à envoyer automatiquement la configuration SIP à chaque téléphone au moment de sa connexion. On a renseigné dans le PBX l'adresse MAC de chaque terminal, associée au compte utilisateur correspondant. À la mise sous tension, chaque téléphone a contacté le serveur, récupéré sa configuration et s'est enregistré automatiquement — sans manipulation locale. Cette méthode élimine les risques d'erreur de saisie poste par poste."},
+      {label:"Phase 4 – Tests &amp; validation", list:[
+        "Appels internes entre postes",
+        "Appels vers l'extérieur",
+        "Transferts et mise en attente",
+        "Vérification de chaque groupe de réponse",
+        "Test des 3 bornes DECT et des 4 téléphones sans fil",
+        "Objectif : livrer des équipements prêts à brancher, intervention sur site limitée à l'installation physique"
       ]}
     ],
-    result: "Infrastructure téléphonique entièrement configurée, prête et déployée chez le client."
+    result: "Les 16 terminaux et 3 bornes DECT ont été livrés opérationnels. Le client dispose d'une infrastructure téléphonique moderne, administrable à distance, avec des fonctionnalités avancées. La qualité audio a été jugée excellente lors des tests.",
+    analysis: "Cette mission m'a permis de comprendre en profondeur la téléphonie IP, un domaine que je ne maîtrisais qu'en théorie. La notion de VLAN voix m'a particulièrement intéressé : elle illustre comment une décision de configuration réseau impacte directement la qualité d'usage. J'ai aussi pris conscience de l'importance du provisioning automatique en contexte professionnel : homogénéité de la configuration et facilitation de la maintenance future. La principale difficulté a été de comprendre la logique de numérotation interne du PBX et la gestion des droits d'appel."
   },
   totem: {
     title: "Totem ViewSonic en mode kiosque – Société BRET",
@@ -539,7 +625,10 @@ function renderModal(key){
   const d = projectsData[key];
   if(!d) return;
   const webProjects = ["portfolio","vitrine"];
-  const badgeText = webProjects.includes(key) ? "Projet web – BTS SIO" : "Projet en alternance – Proxycom";
+  const e5Projects = ["salledesport","jourdain"];
+  let badgeText = "Projet en alternance – Proxycom";
+  if(e5Projects.includes(key)) badgeText = "Situation professionnelle – Épreuve E5";
+  else if(webProjects.includes(key)) badgeText = "Projet web – BTS SIO";
   let html = `<span class="modal-badge">${badgeText}</span>`;
   html += `<div class="modal-title">${d.title}</div>`;
   d.sections.forEach(s => {
@@ -554,6 +643,11 @@ function renderModal(key){
   });
   if(d.result){
     html += `<div class="modal-result"><div class="modal-result-label">Résultat</div><p>${d.result}</p></div>`;
+  }
+  if(d.analysis){
+    html += `<div class="modal-section modal-analysis" style="margin-top:1.2rem;padding:1rem 1.2rem;border-radius:var(--r2);background:rgba(129,140,248,0.06);border:1px solid rgba(129,140,248,0.12);">`;
+    html += `<div class="modal-section-title" style="color:var(--b);">Analyse personnelle</div>`;
+    html += `<p style="color:var(--t2);font-size:.86rem;line-height:1.75;">${d.analysis}</p></div>`;
   }
   if(d.tags){
     html += `<div class="modal-tags">`;
