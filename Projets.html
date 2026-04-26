@@ -210,7 +210,6 @@
         </div>
 
         <div class="grid grid-2">
-            <!-- SP1 – Salle de sport -->
             <article class="card reveal reveal-d1 project-card-mini" data-project="salledesport" style="border-left:3px solid var(--a);cursor:pointer;">
                 <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;">
                     <span style="font-size:1.4rem;">🏗️</span>
@@ -231,7 +230,6 @@
                 <span class="click-hint">⚡ Voir la situation complète</span>
             </article>
 
-            <!-- SP2 – Jourdain -->
             <article class="card reveal reveal-d2 project-card-mini" data-project="jourdain" style="border-left:3px solid var(--b);cursor:pointer;">
                 <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;">
                     <span style="font-size:1.4rem;">📞</span>
@@ -280,12 +278,12 @@
                     Infrastructure clé en main pour un nouveau client : 3 bornes Wi-Fi Zyxel configurées via Nebula,
                     switch PoE, séparation VLAN (réseau personnel sécurisé + Wi-Fi invité isolé),
                     téléphonie fixe et téléphone pompier. Préparation en autonomie en atelier,
-                    déploiement sur site avec un technicien confirmé.
+                    déploiement sur site en binôme avec un technicien confirmé.
                 </p>
                 <ul class="project-meta">
                     <li><strong>Contexte :</strong> nouveau client sans aucune infrastructure réseau ni téléphonique.</li>
                     <li><strong>Rôle :</strong> configuration Nebula en autonomie, déploiement Wi-Fi, téléphonie, câblage RJ45.</li>
-                    <li><strong>Résultat :</strong> infrastructure livrée fonctionnelle, administrable à distance via Nebula.</li>
+                    <li><strong>Résultat :</strong> déploiement terminé en une journée, infrastructure pleinement opérationnelle.</li>
                 </ul>
                 <div class="project-tags">
                     <span class="tag">Zyxel Nebula</span><span class="tag">Wi-Fi</span><span class="tag">VLAN</span>
@@ -325,7 +323,7 @@
 
                 <article class="project-card-mini reveal" data-project="salledesport">
                     <header class="project-card-header"><h3>Déploiement réseau – Salle de sport</h3><span class="pill-outline">Alternance</span></header>
-                    <p class="text-muted">Infrastructure réseau complète : 3 bornes Wi-Fi Zyxel, switch PoE, VLAN, téléphonie et configuration Nebula en autonomie.</p>
+                    <p class="text-muted">Infrastructure réseau complète terminée en une journée : 3 bornes Wi-Fi Zyxel, switch PoE, VLAN, téléphonie et configuration Nebula en autonomie.</p>
                     <div class="project-tags"><span class="tag">Nebula</span><span class="tag">Wi-Fi</span><span class="tag">PoE</span><span class="tag">VLAN</span></div>
                     <span class="click-hint">⚡ Voir les détails</span>
                 </article>
@@ -473,25 +471,51 @@
 /* ===== DONNÉES PROJETS ===== */
 const projectsData = {
   salledesport: {
-    title: "Déploiement réseau complet – Salle de sport (Lons-le-Saunier)",
-    tags: ["Zyxel Nebula","Wi-Fi","Switch PoE","Téléphonie","Keeper"],
+    title: "Déploiement d'une infrastructure réseau complète – Salle de sport (Lons-le-Saunier)",
+    tags: ["Zyxel Nebula","Wi-Fi","Switch PoE","VLAN","Téléphonie","Keeper","Câblage RJ45 Cat.6"],
     sections: [
-      {label:"Contexte", text:"Mise en place d'une infrastructure réseau complète pour un nouveau client (salle de sport) ne disposant d'aucun équipement réseau ni téléphonique."},
-      {label:"Objectif", text:"Déployer l'ensemble de l'infrastructure : 3 bornes Wi-Fi, 1 switch PoE, téléphonie fixe et téléphone pompier."},
-      {label:"Préparation", list:[
-        "Création d'une organisation dans Zyxel Nebula",
-        "Création d'un site dédié au client",
-        "Attribution des équipements réseau au site",
-        "Configuration Wi-Fi : SSID sécurisé avec mot de passe généré via Keeper",
-        "Mise en place d'un Wi-Fi invité isolé du réseau principal"
+      {label:"Contexte", text:"Un nouveau client de Proxycom, exploitant d'une salle de sport à Lons-le-Saunier, souhaitait ouvrir son établissement sans disposer d'aucune infrastructure réseau ni téléphonique. La demande portait sur une solution clé en main : couverture Wi-Fi professionnelle, accès internet sécurisé pour le personnel, réseau invité isolé pour les adhérents, téléphonie fixe et téléphone dédié aux interventions d'urgence (téléphone pompier)."},
+      {label:"Objectifs", list:[
+        "Déployer 3 bornes Wi-Fi offrant une couverture homogène dans l'ensemble des espaces",
+        "Mettre en place un switch PoE pour alimenter les bornes sans câblage électrique supplémentaire",
+        "Configurer 2 SSID distincts : un réseau sécurisé réservé au personnel, un Wi-Fi invité isolé du réseau principal",
+        "Raccorder la téléphonie fixe et le téléphone pompier"
       ]},
-      {label:"Déroulement", list:[
-        "Installation prévue sur site",
-        "Analyse des emplacements optimaux pour les bornes Wi-Fi",
-        "Déploiement et raccordement des équipements"
+      {label:"Organisation", text:"J'ai réalisé la majeure partie de la préparation en autonomie, en atelier, à partir d'un cahier des charges transmis par le commercial. Le déploiement sur site a été réalisé en binôme avec un collègue, sur une journée complète. Cette organisation m'a permis de prendre en charge la configuration complète de la solution Zyxel Nebula avant l'installation physique."},
+      {label:"Outils &amp; technologies", list:[
+        "Zyxel Nebula – plateforme de gestion cloud",
+        "3 bornes Wi-Fi Zyxel",
+        "Switch PoE Zyxel",
+        "Keeper – génération et stockage sécurisé des mots de passe",
+        "Câblage RJ45 catégorie 6"
+      ]},
+      {label:"Phase 1 – Création de l'environnement Nebula", text:"La première étape a consisté à créer l'environnement du client dans Zyxel Nebula. On a créé une organisation dédiée, puis un site associé au client, avant d'y rattacher les équipements (bornes et switch) via leurs numéros de série. Cette approche cloud présente un avantage majeur : les équipements récupèrent automatiquement leur configuration dès leur connexion à internet, ce qui réduit considérablement le temps d'intervention sur site."},
+      {label:"Phase 2 – Configuration des réseaux Wi-Fi", text:"On a ensuite configuré les deux réseaux Wi-Fi directement depuis l'interface Nebula. Le choix de séparer les réseaux par VLAN est une pratique essentielle en sécurité : elle garantit qu'un équipement connecté en Wi-Fi invité ne peut pas interagir avec les postes du personnel ni accéder aux équipements sensibles (caisse, serveur, etc.)."},
+      {label:"Détail des SSID", list:[
+        "SSID personnel : réseau WPA2-Enterprise avec un mot de passe robuste généré via Keeper, accessible uniquement aux employés",
+        "SSID invité : réseau isolé du LAN principal par un VLAN dédié, empêchant tout accès aux ressources internes tout en offrant une connexion internet aux adhérents"
+      ]},
+      {label:"Phase 3 – Déploiement sur site", text:"Le déploiement a été réalisé sur une journée complète, en binôme avec mon collègue. Nous avons commencé par une phase d'observation pour planifier l'intervention, puis enchaîné avec l'installation physique de l'ensemble de l'équipement."},
+      {label:"Déroulement de la journée", list:[
+        "Arrivée le matin : repérage des emplacements optimaux pour les 3 bornes Wi-Fi (2 à l'étage, 1 au rez-de-chaussée) afin d'optimiser la couverture",
+        "Identification de l'emplacement de la baie de brassage et planification du chemin de câblage",
+        "Tirage des câbles RJ45 catégorie 6 depuis la baie jusqu'aux 3 emplacements, en passant sous le faux plafond pour un rendu propre",
+        "Installation du switch PoE dans la baie de brassage et raccordement au réseau",
+        "Connexion directe des 3 bornes Wi-Fi au switch PoE (alimentation et données via un seul câble grâce au PoE)",
+        "Fixation et mise en place des bornes aux emplacements définis"
+      ]},
+      {label:"Phase 4 – Téléphonie &amp; validation", text:"Le raccordement téléphonique a été effectué en parallèle du déploiement Wi-Fi. Une fois l'ensemble de l'infrastructure en place, on a procédé à une phase de validation complète avec le client."},
+      {label:"Tests réalisés", list:[
+        "Vérification de la récupération automatique de la configuration depuis Nebula sur chaque borne",
+        "Validation du fonctionnement de chaque point d'accès Wi-Fi",
+        "Mesure des niveaux de signal dans les différentes zones de la salle",
+        "Test de l'isolation entre le réseau personnel et le réseau invité",
+        "Vérification du fonctionnement de la téléphonie fixe et du téléphone pompier",
+        "Démonstration en temps réel au client"
       ]}
     ],
-    result: "Projet en cours de déploiement."
+    result: "Déploiement terminé en une journée. L'infrastructure a été livrée pleinement fonctionnelle : les 3 bornes Wi-Fi récupèrent automatiquement leur configuration depuis Nebula, la séparation VLAN entre le réseau personnel et le Wi-Fi invité fonctionne correctement, et la téléphonie est opérationnelle. Le client dispose désormais d'une solution professionnelle, centralisée et facilement administrable à distance.",
+    analysis: "Cette mission m'a appris à aborder un déploiement de manière méthodique et anticipée. En préparant la configuration complète avant d'aller sur site, j'ai compris l'intérêt des outils de gestion cloud comme Nebula : ils permettent de réduire les risques d'erreur sur place et de gagner un temps précieux. La phase de repérage en début de journée a été essentielle : prendre le temps d'analyser l'environnement avant de tirer les câbles évite les mauvaises surprises et garantit un résultat propre. J'ai également développé mon sens de l'analyse spatiale pour optimiser le placement des équipements. Une difficulté rencontrée a été de choisir les bons niveaux de puissance d'émission pour éviter les interférences entre bornes voisines — j'ai appris qu'un signal trop fort peut paradoxalement dégrader la qualité de connexion."
   },
   starlink: {
     title: "Solution 5G puis Starlink – Boucherie de la Motte",
@@ -769,7 +793,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     current = (index + imgs.length) % imgs.length;
     imgs[current].classList.add("active");
     dots[current].classList.add("active");
-    /* restart progress bar */
     slider.style.animation = "none";
     slider.offsetHeight;
     slider.style.animation = "";
@@ -789,11 +812,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
   });
 
-  /* pause on hover */
   slider.addEventListener("mouseenter", stopAuto);
   slider.addEventListener("mouseleave", startAuto);
 
-  /* swipe mobile */
   let touchX = 0;
   slider.addEventListener("touchstart", (e)=>{ touchX = e.touches[0].clientX; stopAuto(); }, {passive:true});
   slider.addEventListener("touchend", (e)=>{
@@ -804,6 +825,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   startAuto();
 })();
+
 (()=>{const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:"0px 0px -40px 0px"});document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));})();
 window.addEventListener("scroll",()=>{document.getElementById("mainNav").classList.toggle("scrolled",window.scrollY>50);});
 document.addEventListener("DOMContentLoaded",()=>{
