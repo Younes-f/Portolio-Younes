@@ -6,6 +6,104 @@
     <title>Expériences - Portfolio Younes FARCHICH</title>
     <link href="Style.css" rel="stylesheet">
     <link rel="icon" href="Image/icon_loupe.png">
+<style>
+/* ===== Améliorations légères timeline expériences ===== */
+.exp-timeline-v2{position:relative;padding:1rem 0;}
+.exp-timeline-v2::before{
+  content:"";position:absolute;left:24px;top:1rem;bottom:1rem;width:2px;
+  background:linear-gradient(180deg,var(--a) 0%,var(--b) 50%,var(--c) 100%);
+  opacity:.3;border-radius:2px;
+}
+.exp-item-v2{position:relative;padding-left:64px;margin-bottom:2rem;}
+.exp-item-v2:last-child{margin-bottom:0;}
+.exp-item-v2::before{
+  content:"";position:absolute;left:14px;top:24px;width:22px;height:22px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--a);
+  box-shadow:0 0 0 4px rgba(11,17,32,1),0 0 18px var(--a-glow);
+  z-index:2;transition:transform .3s var(--ease);
+}
+.exp-item-v2:hover::before{transform:scale(1.15);}
+.exp-item-v2.s-stage::before{border-color:var(--b);box-shadow:0 0 0 4px rgba(11,17,32,1),0 0 18px rgba(129,140,248,.35);}
+.exp-item-v2.s-job::before{border-color:var(--c);box-shadow:0 0 0 4px rgba(11,17,32,1),0 0 18px rgba(34,211,238,.35);}
+.exp-item-v2.s-disc::before{border-color:var(--t3);box-shadow:0 0 0 4px rgba(11,17,32,1);}
+
+.exp-card-v2{
+  position:relative;background:var(--card);border:1px solid var(--brd);
+  border-radius:var(--r);padding:1.4rem 1.5rem;backdrop-filter:blur(10px);
+  transition:all .35s var(--ease);overflow:hidden;
+}
+.exp-card-v2::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--a),var(--c));opacity:0;transition:opacity .35s var(--ease);
+}
+.exp-item-v2.s-stage .exp-card-v2::before{background:linear-gradient(90deg,var(--b),var(--c));}
+.exp-item-v2.s-job .exp-card-v2::before{background:linear-gradient(90deg,var(--c),var(--a));}
+.exp-card-v2:hover{transform:translateY(-2px);border-color:var(--brd2);box-shadow:0 14px 40px rgba(0,0,0,.3);}
+.exp-card-v2:hover::before{opacity:1;}
+
+.exp-meta-v2{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-bottom:.8rem;}
+.exp-date-v2{
+  display:inline-flex;align-items:center;gap:.35rem;font-size:.7rem;font-weight:700;
+  padding:.25rem .7rem;border-radius:999px;text-transform:uppercase;letter-spacing:.08em;
+  background:var(--a-dim);color:var(--a);border:1px solid rgba(6,214,160,.2);
+}
+.exp-item-v2.s-stage .exp-date-v2{background:var(--b-dim);color:var(--b);border-color:rgba(129,140,248,.22);}
+.exp-item-v2.s-job .exp-date-v2{background:var(--c-dim);color:var(--c);border-color:rgba(34,211,238,.22);}
+.exp-item-v2.s-disc .exp-date-v2{background:rgba(94,109,130,.15);color:var(--t2);border-color:rgba(94,109,130,.25);}
+.exp-loc-v2{font-size:.78rem;color:var(--t3);font-weight:500;}
+.exp-loc-v2::before{content:"📍 ";}
+
+.exp-body-v2{display:grid;grid-template-columns:280px 1fr;gap:1.5rem;align-items:start;}
+.exp-img-v2{
+  width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r2);
+  border:1px solid var(--brd2);box-shadow:0 8px 24px rgba(0,0,0,.3);
+  transition:transform .4s var(--ease);
+}
+.exp-img-v2:hover{transform:scale(1.03);}
+.exp-text-v2 h3{font-size:1.2rem;font-weight:800;line-height:1.3;margin-bottom:.5rem;color:var(--t);}
+.exp-intro-v2{color:var(--t2);font-size:.9rem;line-height:1.65;margin-bottom:1rem;}
+
+.exp-text-v2 h4{
+  font-size:.78rem;font-weight:700;color:var(--a);
+  text-transform:uppercase;letter-spacing:.08em;
+  margin:1rem 0 .5rem;display:flex;align-items:center;gap:.4rem;
+}
+.exp-item-v2.s-stage .exp-text-v2 h4{color:var(--b);}
+.exp-item-v2.s-job .exp-text-v2 h4{color:var(--c);}
+.exp-item-v2.s-disc .exp-text-v2 h4{color:var(--t2);}
+.exp-text-v2 h4::before{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--a);box-shadow:0 0 8px var(--a-glow);
+}
+.exp-item-v2.s-stage .exp-text-v2 h4::before{background:var(--b);box-shadow:0 0 8px rgba(129,140,248,.5);}
+.exp-item-v2.s-job .exp-text-v2 h4::before{background:var(--c);box-shadow:0 0 8px rgba(34,211,238,.5);}
+.exp-item-v2.s-disc .exp-text-v2 h4::before{background:var(--t2);box-shadow:none;}
+
+.exp-text-v2 ul{margin-left:1.2rem;color:var(--t2);font-size:.86rem;line-height:1.7;}
+.exp-text-v2 li{margin-bottom:.35rem;}
+.exp-text-v2 li strong{color:var(--t);font-weight:600;}
+.exp-text-v2 ul li::marker{color:var(--a);}
+.exp-item-v2.s-stage .exp-text-v2 ul li::marker{color:var(--b);}
+.exp-item-v2.s-job .exp-text-v2 ul li::marker{color:var(--c);}
+
+.exp-quote-v2{
+  margin-top:1.1rem;padding:.8rem 1rem;border-radius:var(--r2);
+  background:linear-gradient(135deg,rgba(6,214,160,.06),rgba(34,211,238,.04));
+  border-left:3px solid var(--a);
+  font-size:.86rem;color:var(--t2);line-height:1.65;font-style:italic;
+}
+.exp-item-v2.s-stage .exp-quote-v2{background:linear-gradient(135deg,rgba(129,140,248,.06),rgba(34,211,238,.04));border-left-color:var(--b);}
+.exp-item-v2.s-job .exp-quote-v2{background:linear-gradient(135deg,rgba(34,211,238,.06),rgba(6,214,160,.04));border-left-color:var(--c);}
+
+@media (max-width:768px){
+  .exp-timeline-v2::before{left:16px;}
+  .exp-item-v2{padding-left:48px;}
+  .exp-item-v2::before{left:5px;width:20px;height:20px;}
+  .exp-body-v2{grid-template-columns:1fr;gap:1rem;}
+  .exp-img-v2{max-width:380px;margin:0 auto;}
+  .exp-card-v2{padding:1.2rem 1.1rem;}
+}
+</style>
 </head>
 <body>
 <header class="header" id="mainNav">
@@ -30,129 +128,152 @@
             Du stage de découverte à l'alternance terrain, des expériences concrètes qui m'ont
             permis de développer mon autonomie, ma rigueur et mes compétences techniques.
         </p>
+        <div class="page-header-tags">
+            <span class="tag-pill">Alternance en cours</span>
+            <span class="tag-pill">Terrain &amp; clients</span>
+            <span class="tag-pill">Réseau &amp; téléphonie</span>
+        </div>
     </header>
 
     <section class="section">
-        <div class="exp-timeline">
+        <div class="exp-timeline-v2">
 
             <!-- ===== ALTERNANCE PROXYCOM ===== -->
-            <article class="card exp-item reveal">
-                <div>
-                    <div class="exp-date">2025 – 2026</div>
-                    <div class="exp-location">Proxycom – Noidans-lès-Vesoul</div>
-                </div>
-                <div class="exp-content">
-                    <img src="Image/proxycom.png" alt="Proxycom Alternance" class="exp-img">
-                    <h3>Alternant technicien réseau – Proxycom</h3>
-                    <p class="text-muted">
-                        En alternance pour ma 2<sup>e</sup> année de BTS SIO SISR, j'interviens au quotidien
-                        sur des missions variées : déploiement d'équipements, diagnostic réseau, câblage,
-                        téléphonie IP et support client. Je travaille en autonomie ou en binôme, directement
-                        sur site chez les clients de l'entreprise.
-                    </p>
+            <article class="exp-item-v2 reveal">
+                <div class="exp-card-v2">
+                    <div class="exp-meta-v2">
+                        <span class="exp-date-v2">⚡ 2025 – 2026 · En cours</span>
+                        <span class="exp-loc-v2">Proxycom – Noidans-lès-Vesoul</span>
+                    </div>
+                    <div class="exp-body-v2">
+                        <img src="Image/proxycom.png" alt="Proxycom Alternance" class="exp-img-v2">
+                        <div class="exp-text-v2">
+                            <h3>Alternant technicien réseau – Proxycom</h3>
+                            <p class="exp-intro-v2">
+                                En alternance pour ma 2<sup>e</sup> année de BTS SIO SISR, j'interviens au quotidien
+                                sur des missions variées : déploiement d'équipements, diagnostic réseau, câblage,
+                                téléphonie IP et support client. Je travaille en autonomie ou en binôme, directement
+                                sur site chez les clients de l'entreprise.
+                            </p>
 
-                    <h4>Interventions terrain &amp; diagnostic</h4>
-                    <ul>
-                        <li><strong>Client Atherme</strong> – Remise en service d'un écran d'affichage dynamique équipé de la plateforme Touchify. Après une désynchronisation causée par le client, j'ai réalisé le diagnostic, la réinitialisation, la réinstallation complète et la resynchronisation sur site.</li>
-                        <li><strong>Boucherie de la Motte</strong> – Remplacement d'un routeur 4G par un routeur 5G en baie de brassage, puis installation d'une solution Starlink satellite avec mon collègue pour résoudre définitivement les coupures de connectivité.</li>
-                    </ul>
+                            <h4>Interventions terrain &amp; diagnostic</h4>
+                            <ul>
+                                <li><strong>Client Atherme</strong> – Remise en service d'un écran d'affichage dynamique équipé de la plateforme Touchify. Après une désynchronisation causée par le client, j'ai réalisé le diagnostic, la réinitialisation, la réinstallation complète et la resynchronisation sur site.</li>
+                                <li><strong>Boucherie de la Motte</strong> – Remplacement d'un routeur 4G par un routeur 5G en baie de brassage, puis installation d'une solution Starlink satellite avec mon collègue pour résoudre définitivement les coupures de connectivité.</li>
+                            </ul>
 
-                    <h4>Déploiement d'équipements &amp; affichage dynamique</h4>
-                    <ul>
-                        <li><strong>Société BRET – Salon de l'habitat</strong> – Préparation d'un totem ViewSonic avec un mini PC configuré en mode kiosque Windows pour restreindre la navigation au site de l'entreprise.</li>
-                        <li><strong>Société Boulanger – Salon</strong> – Reproduction du même dispositif pour un autre salon professionnel.</li>
-                        <li><strong>Société DUMONT</strong> – Installation d'un écran interactif 65 pouces, mise en réseau et mise en service pour un usage commercial immersif.</li>
-                    </ul>
+                            <h4>Déploiement d'équipements &amp; affichage dynamique</h4>
+                            <ul>
+                                <li><strong>Société BRET – Salon de l'habitat</strong> – Préparation d'un totem ViewSonic avec un mini PC configuré en mode kiosque Windows pour restreindre la navigation au site de l'entreprise.</li>
+                                <li><strong>Société Boulanger – Salon</strong> – Reproduction du même dispositif pour un autre salon professionnel.</li>
+                                <li><strong>Société DUMONT</strong> – Installation d'un écran interactif 65 pouces, mise en réseau et mise en service pour un usage commercial immersif.</li>
+                            </ul>
 
-                    <h4>Téléphonie &amp; câblage</h4>
-                    <ul>
-                        <li><strong>Intermarché La Vaugine</strong> – Réalisation de noyaux RJ11 pour raccorder des téléphones fixes à un FXS relié au PBX. Réalisation de noyaux RJ45 pour un interphone, puis installation et mise en réseau.</li>
-                        <li><strong>Client Jourdain</strong> – Préparation du remplacement complet d'un parc téléphonique : configuration du PBX, d'un switch 24 ports, VLAN 12 dédié à la téléphonie, provisioning de 12 fixes et 4 sans fil.</li>
-                    </ul>
+                            <h4>Téléphonie &amp; câblage</h4>
+                            <ul>
+                                <li><strong>Intermarché La Vaugine</strong> – Réalisation de noyaux RJ11 pour raccorder des téléphones fixes à un FXS relié au PBX. Réalisation de noyaux RJ45 pour un interphone, puis installation et mise en réseau.</li>
+                                <li><strong>Client Jourdain</strong> – Préparation du remplacement complet d'un parc téléphonique : configuration du PBX, d'un switch 24 ports, VLAN 12 dédié à la téléphonie, provisioning de 12 fixes et 4 sans fil.</li>
+                            </ul>
 
-                    <h4>Missions courantes</h4>
-                    <ul>
-                        <li>Déploiement et configuration de routeurs, bornes Wi-Fi et équipements réseau.</li>
-                        <li>Participation au support utilisateurs et aux interventions sur site.</li>
-                        <li>Mise en place et suivi de solutions de sécurité (VPN, firewall, segmentation).</li>
-                    </ul>
+                            <h4>Missions courantes</h4>
+                            <ul>
+                                <li>Déploiement et configuration de routeurs, bornes Wi-Fi et équipements réseau.</li>
+                                <li>Participation au support utilisateurs et aux interventions sur site.</li>
+                                <li>Mise en place et suivi de solutions de sécurité (VPN, firewall, segmentation).</li>
+                            </ul>
 
-                    <p class="text-muted" style="margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--brd);">
-                        Ces missions m'ont permis de gagner en autonomie sur le terrain, de développer
-                        ma capacité de diagnostic et de renforcer mes compétences en réseau, téléphonie et relation client.
-                    </p>
+                            <p class="exp-quote-v2">
+                                Ces missions m'ont permis de gagner en autonomie sur le terrain, de développer
+                                ma capacité de diagnostic et de renforcer mes compétences en réseau, téléphonie et relation client.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </article>
 
             <!-- ===== STAGE PROXYCOM ===== -->
-            <article class="card exp-item reveal">
-                <div>
-                    <div class="exp-date">Mai – Juin 2025</div>
-                    <div class="exp-location">Proxycom – Noidans-lès-Vesoul</div>
-                </div>
-                <div class="exp-content">
-                    <img src="Image/proxycom_hall.png" alt="Proxycom" class="exp-img exp-img-small">
-                    <h3>Stage technicien réseau – Proxycom</h3>
-                    <p class="text-muted">
-                        Stage de 5 semaines dans une entreprise spécialisée dans les solutions télécoms
-                        et informatiques pour les entreprises.
-                    </p>
+            <article class="exp-item-v2 s-stage reveal">
+                <div class="exp-card-v2">
+                    <div class="exp-meta-v2">
+                        <span class="exp-date-v2">🎓 Mai – Juin 2025 · Stage</span>
+                        <span class="exp-loc-v2">Proxycom – Noidans-lès-Vesoul</span>
+                    </div>
+                    <div class="exp-body-v2">
+                        <img src="Image/proxycom_hall.png" alt="Proxycom" class="exp-img-v2">
+                        <div class="exp-text-v2">
+                            <h3>Stage technicien réseau – Proxycom</h3>
+                            <p class="exp-intro-v2">
+                                Stage de 5 semaines dans une entreprise spécialisée dans les solutions télécoms
+                                et informatiques pour les entreprises.
+                            </p>
 
-                    <h4>Missions techniques</h4>
-                    <ul>
-                        <li>Installation d'équipements chez les clients : écrans ViewSonic, routeurs, TPE, tablettes.</li>
-                        <li>Dépannage sur site (pharmacies, pizzaiolos, collectivités, etc.).</li>
-                        <li>Configuration de routeurs MikroTik via Winbox : adressage IP, Wi-Fi, tests de synchronisation.</li>
-                        <li>Automatisation de tâches récurrentes avec des scripts PowerShell.</li>
-                    </ul>
+                            <h4>Missions techniques</h4>
+                            <ul>
+                                <li>Installation d'équipements chez les clients : écrans ViewSonic, routeurs, TPE, tablettes.</li>
+                                <li>Dépannage sur site (pharmacies, pizzaiolos, collectivités, etc.).</li>
+                                <li>Configuration de routeurs MikroTik via Winbox : adressage IP, Wi-Fi, tests de synchronisation.</li>
+                                <li>Automatisation de tâches récurrentes avec des scripts PowerShell.</li>
+                            </ul>
 
-                    <h4>Missions organisationnelles</h4>
-                    <ul>
-                        <li>Réception et gestion de colis, préparation d'envois pour les clients.</li>
-                        <li>Préparation d'environ 280 colis pour des livraisons massives.</li>
-                        <li>Création d'un catalogue de présentation pour les écrans ViewSonic.</li>
-                    </ul>
+                            <h4>Missions organisationnelles</h4>
+                            <ul>
+                                <li>Réception et gestion de colis, préparation d'envois pour les clients.</li>
+                                <li>Préparation d'environ 280 colis pour des livraisons massives.</li>
+                                <li>Création d'un catalogue de présentation pour les écrans ViewSonic.</li>
+                            </ul>
 
-                    <p class="text-muted">
-                        Une expérience marquante : l'installation de huit écrans en une seule journée sur deux sites
-                        de pompes funèbres, nécessitant organisation, travail d'équipe et efficacité.
-                    </p>
+                            <p class="exp-quote-v2">
+                                Une expérience marquante : l'installation de huit écrans en une seule journée sur deux sites
+                                de pompes funèbres, nécessitant organisation, travail d'équipe et efficacité.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </article>
 
             <!-- ===== MISTER AUTO ===== -->
-            <article class="card exp-item reveal">
-                <div>
-                    <div class="exp-date">Août 2024</div>
-                    <div class="exp-location">Mister Auto</div>
-                </div>
-                <div class="exp-content">
-                    <img src="Image/mister_auto.png" alt="Mister Auto" class="exp-img exp-img-small">
-                    <h3>Préparateur de commandes – Mister Auto</h3>
-                    <p class="text-muted">Emploi saisonnier dans une entreprise de distribution de pièces détachées automobiles.</p>
-                    <ul>
-                        <li>Préparation des commandes clients en respectant les délais et les procédures.</li>
-                        <li>Contrôle de la conformité des produits avant expédition.</li>
-                        <li>Travail en entrepôt, gestion de la cadence et rigueur dans les tâches.</li>
-                    </ul>
+            <article class="exp-item-v2 s-job reveal">
+                <div class="exp-card-v2">
+                    <div class="exp-meta-v2">
+                        <span class="exp-date-v2">💼 Août 2024 · Saisonnier</span>
+                        <span class="exp-loc-v2">Mister Auto</span>
+                    </div>
+                    <div class="exp-body-v2">
+                        <img src="Image/mister_auto.png" alt="Mister Auto" class="exp-img-v2">
+                        <div class="exp-text-v2">
+                            <h3>Préparateur de commandes – Mister Auto</h3>
+                            <p class="exp-intro-v2">Emploi saisonnier dans une entreprise de distribution de pièces détachées automobiles.</p>
+                            <h4>Missions</h4>
+                            <ul>
+                                <li>Préparation des commandes clients en respectant les délais et les procédures.</li>
+                                <li>Contrôle de la conformité des produits avant expédition.</li>
+                                <li>Travail en entrepôt, gestion de la cadence et rigueur dans les tâches.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </article>
 
             <!-- ===== STAGE 3e ===== -->
-            <article class="card exp-item reveal">
-                <div>
-                    <div class="exp-date">2021</div>
-                    <div class="exp-location">Atelier de mécanique automobile</div>
-                </div>
-                <div class="exp-content">
-                    <img src="Image/garage_auto.png" alt="Garage auto" class="exp-img">
-                    <h3>Stage de découverte – Mécanique automobile</h3>
-                    <p class="text-muted">Stage de 3<sup>e</sup> d'une semaine dans un atelier de mécanique automobile.</p>
-                    <ul>
-                        <li>Observation du fonctionnement d'un garage et des interventions sur véhicules.</li>
-                        <li>Découverte des différentes étapes du diagnostic et de la réparation.</li>
-                        <li>Première expérience du travail en équipe et du contact avec la clientèle.</li>
-                    </ul>
+            <article class="exp-item-v2 s-disc reveal">
+                <div class="exp-card-v2">
+                    <div class="exp-meta-v2">
+                        <span class="exp-date-v2">🔍 2021 · Stage 3<sup>e</sup></span>
+                        <span class="exp-loc-v2">Atelier de mécanique automobile</span>
+                    </div>
+                    <div class="exp-body-v2">
+                        <img src="Image/garage_auto.png" alt="Garage auto" class="exp-img-v2">
+                        <div class="exp-text-v2">
+                            <h3>Stage de découverte – Mécanique automobile</h3>
+                            <p class="exp-intro-v2">Stage de 3<sup>e</sup> d'une semaine dans un atelier de mécanique automobile.</p>
+                            <h4>Découvertes</h4>
+                            <ul>
+                                <li>Observation du fonctionnement d'un garage et des interventions sur véhicules.</li>
+                                <li>Découverte des différentes étapes du diagnostic et de la réparation.</li>
+                                <li>Première expérience du travail en équipe et du contact avec la clientèle.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -193,11 +314,8 @@ document.addEventListener("DOMContentLoaded",()=>{
   const c=document.getElementById("particles");
   for(let i=0;i<35;i++){const p=document.createElement("div");p.classList.add("particle");p.style.left=Math.random()*100+"vw";p.style.animationDuration=(14+Math.random()*18)+"s";p.style.animationDelay=(Math.random()*14)+"s";c.appendChild(p);}
 });
-/* scroll reveal */
 (()=>{const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:"0px 0px -40px 0px"});document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));})();
-/* nav scroll */
 window.addEventListener("scroll",()=>{document.getElementById("mainNav").classList.toggle("scrolled",window.scrollY>50);});
-/* typewriter */
 document.addEventListener("DOMContentLoaded",()=>{
   document.querySelectorAll(".page-header-title").forEach(el=>{
     const txt=el.textContent.trim();if(!txt)return;el.textContent="";el.classList.add("typewriter");
