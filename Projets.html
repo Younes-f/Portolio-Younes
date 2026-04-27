@@ -254,6 +254,58 @@
 
     <div class="divider"><div class="divider-line"></div></div>
 
+    <!-- ===== PRODUCTION ÉPREUVE E6 ===== -->
+    <section class="section">
+        <div class="section-intro reveal">
+            <h2>Production – Épreuve E6 <span class="e5-badge" style="background:linear-gradient(135deg,rgba(129,140,248,0.18),rgba(56,189,248,0.18));border-color:rgba(129,140,248,0.25);color:var(--b);">BTS SIO SISR</span></h2>
+            <p class="text-muted">Deux missions techniques approfondies réalisées sur la plateforme GSB (CERTA), présentées dans le cadre de l'épreuve E6 – Administration des systèmes et des réseaux.</p>
+        </div>
+
+        <div class="grid grid-2">
+            <article class="card reveal reveal-d1 project-card-mini" data-project="gsb-newservice" style="border-left:3px solid var(--c);cursor:pointer;">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;">
+                    <span style="font-size:1.4rem;">🏢</span>
+                    <div>
+                        <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c);">Mission 3 – Réalisation n°1</span>
+                    </div>
+                </div>
+                <h3 style="font-size:1.1rem;line-height:1.3;margin-bottom:.6rem;">Intégration d'un nouveau service – Qualité (GSB)</h3>
+                <p class="text-muted" style="font-size:.86rem;">
+                    Création complète d'un nouveau service métier sur la plateforme GSB :
+                    VLAN 58 dédié, OU Active Directory, partages NTFS, scripts Batch
+                    d'automatisation et GPO de mappage des lecteurs réseau.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.8rem;">
+                    <span class="tag">VLAN</span><span class="tag">Active Directory</span><span class="tag">GPO</span>
+                    <span class="tag">Scripts Batch</span><span class="tag">DHCP</span><span class="tag">NTFS</span>
+                </div>
+                <span class="click-hint">⚡ Voir la mission complète</span>
+            </article>
+
+            <article class="card reveal reveal-d2 project-card-mini" data-project="gsb-tolerance" style="border-left:3px solid var(--b);cursor:pointer;">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;">
+                    <span style="font-size:1.4rem;">🛡️</span>
+                    <div>
+                        <span style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--b);">Mission 2 – Réalisation n°2</span>
+                    </div>
+                </div>
+                <h3 style="font-size:1.1rem;line-height:1.3;margin-bottom:.6rem;">Mise en place de la tolérance de panne (GSB)</h3>
+                <p class="text-muted" style="font-size:.86rem;">
+                    Suppression des points de défaillance unique sur l'infrastructure :
+                    redondance des passerelles via VRRP, déploiement d'un contrôleur
+                    de domaine secondaire et basculement DHCP entre deux serveurs.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.8rem;">
+                    <span class="tag">VRRP</span><span class="tag">AD DS</span><span class="tag">DHCP Failover</span>
+                    <span class="tag">Windows Server 2022</span><span class="tag">HPE</span><span class="tag">Cisco</span>
+                </div>
+                <span class="click-hint">⚡ Voir la mission complète</span>
+            </article>
+        </div>
+    </section>
+
+    <div class="divider"><div class="divider-line"></div></div>
+
     <!-- ===== PROJET PHARE – SALLE DE SPORT ===== -->
     <section class="section">
         <article class="card project-showcase reveal project-card-mini" data-project="salledesport" style="border-top:2px solid var(--a);cursor:pointer;">
@@ -381,6 +433,18 @@
         <div class="projects-columns">
             <div class="project-column">
                 <h3 class="project-column-title">Architecture &amp; conception</h3>
+                <article class="project-card-mini reveal" data-project="gsb-tolerance">
+                    <header class="project-card-header"><h3>Tolérance de panne – Plateforme GSB</h3><span class="pill">BTS SIO – E6</span></header>
+                    <p class="text-muted">Mise en place de VRRP entre 2 switchs HPE, déploiement d'un DC secondaire et basculement DHCP entre 2 serveurs Windows Server 2022.</p>
+                    <div class="project-tags"><span class="tag">VRRP</span><span class="tag">AD DS</span><span class="tag">DHCP Failover</span></div>
+                    <span class="click-hint">⚡ Voir les détails</span>
+                </article>
+                <article class="project-card-mini reveal" data-project="gsb-newservice">
+                    <header class="project-card-header"><h3>Intégration service Qualité – GSB</h3><span class="pill">BTS SIO – E6</span></header>
+                    <p class="text-muted">Création d'un nouveau service métier : VLAN 58, OU Active Directory, partages NTFS, scripts Batch d'automatisation et GPO de mappage.</p>
+                    <div class="project-tags"><span class="tag">VLAN</span><span class="tag">AD / GPO</span><span class="tag">Scripts</span></div>
+                    <span class="click-hint">⚡ Voir les détails</span>
+                </article>
                 <article class="project-card-mini reveal">
                     <header class="project-card-header"><h3>Projet XONI</h3><span class="pill">BTS SIO</span></header>
                     <p class="text-muted">Infrastructure réseau complète pour une entreprise fictive : schémas, plan d'adressage IP, segmentation et documentation.</p>
@@ -438,7 +502,7 @@
     <section class="section">
         <div class="section-intro reveal"><h2>Progression de mes projets</h2><p class="text-muted">Une vue chronologique de mon évolution.</p></div>
         <div class="project-timeline">
-            <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2025–2026</span><h3>Alternance chez Proxycom</h3><p class="text-muted">Déploiement réseau, Starlink, téléphonie IP, câblage, mode kiosque, Nebula et interventions clients.</p></div></div>
+            <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2025–2026</span><h3>Alternance chez Proxycom &amp; missions E6 sur la plateforme GSB</h3><p class="text-muted">En entreprise : déploiement réseau, Starlink, téléphonie IP, Nebula. Au lycée : intégration du service Qualité (VLAN, AD, GPO, scripts) puis mise en place de la tolérance de panne (VRRP, DC secondaire, DHCP failover) sur la plateforme CERTA-GSB.</p></div></div>
             <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2024–2025</span><h3>Projets structurés &amp; portfolio</h3><p class="text-muted">Projet XONI, Salle 109, portfolio avancé et montée en compétences réseau.</p></div></div>
             <div class="timeline-item reveal"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2023–2024</span><h3>Projets de découverte en BTS</h3><p class="text-muted">Premiers projets réseau et web, site vitrine, TP Active Directory.</p></div></div>
         </div>
@@ -655,6 +719,75 @@ const projectsData = {
     ],
     result: "Déploiement complet de 8 écrans réalisé en une seule journée."
   },
+  "gsb-newservice": {
+    title: "Mission 3 – Intégration d'un nouveau service utilisateur (Qualité) sur la plateforme GSB",
+    tags: ["VLAN","Active Directory","GPO","Scripts Batch","DHCP","NTFS","HPE","Cisco","Windows Server 2022"],
+    sections: [
+      {label:"Contexte", text:"Dans le cadre du développement de l'entreprise GSB, la direction souhaitait intégrer un nouveau service métier — le service « Qualité » — chargé du suivi des normes, des procédures internes, du contrôle produits, des prestations associées et de la documentation qualité. Cette intégration devait s'effectuer sans dégrader le fonctionnement des services déjà en place (Communication – VLAN 53, Compta &amp; RH – VLAN 54, Serveurs – VLAN 50) et devait être reproductible pour faciliter la création de futurs services. Mission réalisée seul, dans le cadre de l'épreuve E6 du BTS SIO SISR, sur la plateforme CERTA-GSB."},
+      {label:"Objectifs", list:[
+        "Adapter l'infrastructure réseau : créer le VLAN 58 dédié au service Qualité (réseau 192.168.8.0/24, passerelle 192.168.8.254)",
+        "Provisionner les comptes utilisateurs dans Active Directory (domaine gsb05.local) : OU « Qualite », groupes de sécurité métier (Normes, Procedures, Produits, Services, Documentations) et partages NTFS associés",
+        "Automatiser les tâches récurrentes par des scripts Batch (création d'étendue DHCP, provisionnement des comptes utilisateurs depuis un fichier source)",
+        "Centraliser l'expérience utilisateur via une stratégie de groupe (GPO) qui mappe automatiquement le lecteur réseau personnel (H:) et le lecteur commun du service à la connexion"
+      ]},
+      {label:"Outils &amp; technologies", list:[
+        "Switch HPE niveau 3 (cœur de réseau, routage inter-VLAN, agent relai DHCP)",
+        "Switch Cisco niveau 2 (distribution des postes clients)",
+        "Windows Server 2022 — Labannu (AD DS / DNS) et Rezolab (DHCP)",
+        "Scripts Batch (dsadd, dsmod, icacls, netsh dhcp)",
+        "Console Gestion des stratégies de groupe (GPMC)",
+        "Plateforme Proxmox pour la virtualisation"
+      ]},
+      {label:"Étape 1 — Adaptation de l'infrastructure réseau", text:"Création du VLAN 58 sur le switch Cisco (déclaration, ports access pour les postes Qualité, mise à jour du trunk vers le HPE) puis sur le switch HPE (création du VLAN, interface SVI Vlan-interface 58 portant l'adresse 192.168.8.254 dans la vpn-instance Farchich, configuration de l'agent relai DHCP redirigeant les requêtes vers Rezolab — 10.5.1.10). L'étendue DHCP 192.168.8.0/24 a ensuite été créée sur le serveur Rezolab via le script d'automatisation (cf. étape 3)."},
+      {label:"Étape 2 — Génération des comptes utilisateurs", text:"Sur le contrôleur de domaine Labannu (gsb05.local), deux scripts Batch ont été développés et exécutés successivement. Le premier (creation_structure.bat) crée l'OU « Qualite », le groupe de sécurité principal et ses cinq sous-groupes métier, ainsi que la structure de dossiers partagés \\\\LABANNU\\Qualite avec les permissions NTFS adaptées (principe du moindre privilège : Modify pour le sous-groupe métier sur son dossier, Full pour l'administrateur, Read pour le groupe Qualite parent). Le second (user.bat) lit un fichier source user.txt au format login;prenom;nom;motdepasse;sous-groupe et provisionne chaque compte : création de l'utilisateur, ajout au sous-groupe, création du dossier personnel et configuration du mappage du lecteur H: dans les propriétés AD."},
+      {label:"Étape 3 — Automatisation des tâches d'administration", text:"Deux mécanismes d'automatisation ont été déployés. Sur Rezolab, le script creationetendue.bat permet de créer n'importe quelle étendue DHCP de manière interactive, sans passer par la console graphique : il demande à l'opérateur les paramètres (nom, réseau, masque, plage, passerelle, DNS), puis enchaîne les commandes netsh dhcp pour créer l'étendue, configurer ses options (003 passerelle, 006 DNS, 015 nom de domaine) et l'activer. Sur Labannu, une GPO « Mappage Lecteurs Qualite » a été créée et liée à l'OU Qualite : elle déclare automatiquement deux lecteurs réseau à la connexion — H: (\\\\LABANNU\\Qualite\\user\\%username%, dossier personnel) et Q: (\\\\LABANNU\\Qualite, dossier commun du service)."},
+      {label:"Tests &amp; validation", list:[
+        "Obtention automatique d'une IP dans la plage 192.168.8.x sur un poste client du VLAN 58",
+        "Joignabilité de la passerelle 192.168.8.254 et résolution DNS (ping labannu.gsb05.local)",
+        "Présence de l'OU Qualite et des 5 groupes métier dans la console AD",
+        "Vérification des permissions NTFS sur chaque sous-dossier (Modify / Full / Read)",
+        "Ouverture de session avec un compte utilisateur du service (ex. BarratinL) — authentification OK sur le domaine",
+        "Présence et accès aux lecteurs H: (Dossier personnel) et Q: (Dossier Qualite) dans l'explorateur Windows",
+        "Vérification de l'application de la GPO via gpresult /r"
+      ]}
+    ],
+    result: "Service Qualité pleinement intégré à l'infrastructure GSB. Le VLAN 58 fonctionne, les comptes des utilisateurs du service ouvrent leur session sur le domaine, accèdent à leur lecteur personnel H: et au lecteur commun Q: de manière transparente. Les scripts Batch développés sont réutilisables pour la création de futurs services, ce qui industrialise le déploiement et limite le risque d'erreur humaine.",
+    analysis: "Cette mission m'a permis de toucher à la fois au réseau (VLAN, routage inter-VLAN, agent relai DHCP), au système (Active Directory, GPO, NTFS) et à l'automatisation (scripts Batch, netsh, dsadd). J'ai compris l'intérêt concret de la séparation des rôles : Rezolab gère la distribution IP, Labannu gère l'annuaire et les stratégies — chacun reste cantonné à sa responsabilité. La principale difficulté a été la gestion des permissions NTFS imbriquées : je voulais initialement appliquer toutes les permissions au niveau du dossier racine, mais j'ai compris l'intérêt du principe du moindre privilège — un utilisateur ne doit avoir d'accès en écriture que sur son propre périmètre métier. L'écriture des scripts Batch m'a aussi appris l'importance de penser dès la conception à la réutilisabilité : le script de création d'étendue DHCP fonctionne pour n'importe quel futur VLAN, pas uniquement pour le service Qualité."
+  },
+  "gsb-tolerance": {
+    title: "Mission 2 – Mise en place de la tolérance de panne sur la plateforme GSB",
+    tags: ["VRRP","AD DS","DHCP Failover","Windows Server 2022","HPE","Cisco","Zabbix","Wazuh","Haute disponibilité"],
+    sections: [
+      {label:"Contexte", text:"À la suite d'un audit interne de résilience de l'infrastructure GSB, plusieurs points de défaillance unique (Single Point of Failure) ont été identifiés sur les services internes critiques : une seule passerelle par défaut sur chaque VLAN portée par un unique switch HPE de niveau 3, un unique contrôleur de domaine (Labannu) hébergeant Active Directory et le DNS, et un unique serveur DHCP (Rezolab). L'objectif de la mission était de supprimer ces trois points de défaillance par la mise en place de trois mécanismes de redondance complémentaires. Mission réalisée seul, dans le cadre de l'épreuve E6 du BTS SIO SISR, sur la plateforme CERTA-GSB."},
+      {label:"Objectifs", list:[
+        "Redondance de la passerelle par VRRP entre deux switchs HPE de niveau 3, portant chacun les interfaces SVI des VLAN 50, 53, 54 et 58",
+        "Redondance du contrôleur de domaine par déploiement d'un second serveur Windows Server 2022 (Backup2) promu en DC secondaire avec rôles AD DS, DNS et catalogue global",
+        "Redondance du serveur DHCP via le mécanisme de basculement intégré à Windows Server (DHCP failover) en mode équilibrage de charge 50/50",
+        "Étendre la supervision Zabbix et la collecte de logs Wazuh aux nouveaux éléments déployés"
+      ]},
+      {label:"Outils &amp; technologies", list:[
+        "2 switchs HPE niveau 3 (Rouge/Noir Master, Vert/Bleu Backup) — protocole VRRP",
+        "1 nouveau switch Cisco niveau 2 ajouté pour la convergence des liens serveurs",
+        "Windows Server 2022 — Labannu (DC principal), Rezolab (DHCP principal), Backup2 (DC + DHCP secondaires)",
+        "Plateforme Proxmox pour le clonage de la VM Backup2",
+        "Zabbix (supervision) + Wazuh (analyse de logs) — déjà déployés en zone d'administration"
+      ]},
+      {label:"Chantier 1 — Tolérance de panne au niveau des routeurs (VRRP)", text:"Le protocole VRRP a été déployé entre les deux switchs HPE de niveau 3, portant chacun les interfaces SVI des VLAN 50, 53, 54 et 58. Un nouveau switch Cisco a été installé en amont pour permettre la convergence des liens depuis les serveurs vers les deux HPE. Le HPE Rouge/Noir a été désigné Master (priorité 120) et le HPE Vert/Bleu désigné Backup (priorité 100, valeur par défaut). Une adresse IP virtuelle (VIP) propre à chaque VLAN a été configurée comme passerelle par défaut pour les clients : 10.5.1.252 (VLAN 50), 192.168.3.252 (VLAN 53), 192.168.4.252 (VLAN 54) et 192.168.8.252 (VLAN 58). En cas de défaillance du Master, le Backup reprend automatiquement la VIP — les postes clients n'ont aucune modification à effectuer."},
+      {label:"Chantier 2 — Tolérance de panne au niveau du contrôleur de domaine", text:"Le serveur Backup2 a été déployé sur Proxmox par clonage intégral d'un template Windows Server 2022, placé sur le VLAN 50 (Serveurs, 10.5.1.50/24) aux côtés de Labannu et Rezolab. Cette colocation permet à la réplication AD entre les deux DC d'utiliser le réseau interne sans passer par le routage inter-VLAN. Configuration en trois étapes : (1) configuration système — IP statique 10.5.1.50, passerelle 10.5.1.254, DNS 10.5.1.30 (Labannu), renommage et jonction au domaine gsb05.local ; (2) installation des rôles AD DS, DNS et DHCP ; (3) promotion en contrôleur de domaine secondaire via l'assistant ADDS, avec les options Serveur DNS et Catalogue global cochées, le mode RODC décoché, et un mot de passe DSRM défini. La réplication multi-maître native d'Active Directory garantit la cohérence des objets entre les deux DC."},
+      {label:"Chantier 3 — Tolérance de panne au niveau du serveur DHCP", text:"Le mécanisme de basculement DHCP intégré à Windows Server 2022 a été configuré entre Rezolab (principal) et Backup2 (secondaire). Étape 1 : autorisation du serveur secondaire dans l'AD via la console DHCP. Étape 2 : configuration du basculement depuis Rezolab — clic droit sur IPv4 → Configurer un basculement, en sélectionnant les trois étendues 192.168.3.0, 192.168.4.0 et 192.168.8.0, en désignant 10.5.1.50 comme partenaire, en choisissant le mode équilibrage de charge 50/50 avec un MCLT (délai maximal de transition client) d'1 heure et un secret partagé pour authentifier les messages. Une fois validé, les étendues et leurs baux actifs sont automatiquement répliqués vers Backup2. En complément, l'agent relai DHCP du switch HPE a été mis à jour pour relayer les requêtes vers les deux serveurs (10.5.1.10 et 10.5.1.50)."},
+      {label:"Tests &amp; validation", list:[
+        "VRRP : ping continu vers la VIP 192.168.8.252 depuis un poste VLAN 58, débranchement du HPE Rouge/Noir → brève perte (1 à 3 paquets) puis reprise automatique par le HPE Vert/Bleu",
+        "VRRP : rebranchement du HPE Rouge/Noir → reprise du rôle Master grâce à sa priorité 120 supérieure à 100, bascule transparente",
+        "AD : présence de Labannu et Backup2 dans l'OU Domain Controllers, type GC",
+        "AD : création d'un utilisateur test sur Labannu, vérification de sa présence sur Backup2 quelques secondes plus tard (réplication multi-maître)",
+        "AD : extinction de Labannu, ouverture de session sur un poste avec un compte du domaine — authentification OK, Backup2 prend le relais (Kerberos / LDAP)",
+        "DHCP : extinction de Rezolab, demande de bail depuis un poste client — IP attribuée par Backup2, continuité de service confirmée"
+      ]},
+      {label:"Intégration dans la supervision", text:"L'infrastructure Zabbix existante (VLAN admin, 10.5.8.0/24) a été étendue pour superviser les nouveaux éléments : disponibilité du service AD (port TCP 389), DNS (port 53), DHCP (port UDP 67) et espace disque sur Backup2 via agent Zabbix Windows et ICMP, ainsi que l'état de la relation DHCP failover (Normal / Communication interrompue) via les compteurs perfmon. En parallèle, l'intégration dans Wazuh est en cours pour la collecte des journaux d'événements ciblés : échecs de réplication AD, échecs d'authentification (Event ID 4625), bascules VRRP, et erreurs de communication DHCP failover. L'objectif final est de disposer d'un point unique de consultation pour l'historique des bascules et événements critiques."}
+    ],
+    result: "Les trois points de défaillance unique critiques de l'infrastructure GSB ont été supprimés. Lors des tests de panne contrôlée (débranchement physique du HPE Master, extinction de Labannu, extinction de Rezolab), la continuité de service a été validée à chaque fois — soit par bascule transparente, soit avec une coupure courte (1 à 3 paquets) imperceptible pour l'utilisateur final. L'infrastructure GSB dispose désormais d'une véritable haute disponibilité sur ses services internes critiques.",
+    analysis: "Cette mission m'a fait toucher du doigt la différence entre comprendre la haute disponibilité en théorie et la mettre en œuvre sur une infrastructure réelle. La notion de priorité VRRP m'a semblé évidente sur le papier, mais il a fallu réfléchir au cas du retour à la normale : qu'est-ce qui se passe quand le Master revient après une panne ? Sans la priorité 120, le Master ne reprendrait pas son rôle au retour — j'ai compris l'intérêt de bien différencier les priorités pour avoir un comportement déterministe. Pour le DHCP failover, le mode équilibrage de charge 50/50 m'a paru plus intéressant que le mode hot-standby, car les deux serveurs travaillent en permanence : on détecte ainsi immédiatement si l'un des deux dysfonctionne, plutôt que de découvrir le problème uniquement au moment où le principal tombe. La principale difficulté a été la chronologie des chantiers : on ne peut pas configurer le DHCP failover avant d'avoir promu Backup2 en DC, et on ne peut pas tester correctement le VRRP sans avoir un serveur DHCP secondaire — il a fallu enchaîner les chantiers dans le bon ordre. Cette mission m'a aussi sensibilisé à l'importance de la supervision : déployer la haute disponibilité sans la superviser, c'est risquer de ne pas voir qu'un des deux nœuds est en panne et perdre la redondance sans le savoir."
+  },
   portfolio: {
     title: "Développement d'un portfolio web professionnel",
     tags: ["HTML","CSS","JavaScript","UI / UX","Responsive","Glassmorphism"],
@@ -718,8 +851,10 @@ function renderModal(key){
   if(!d) return;
   const webProjects = ["portfolio","vitrine"];
   const e5Projects = ["salledesport","jourdain"];
+  const e6Projects = ["gsb-tolerance","gsb-newservice"];
   let badgeText = "Projet en alternance – Proxycom";
-  if(e5Projects.includes(key)) badgeText = "Situation professionnelle – Épreuve E5";
+  if(e6Projects.includes(key)) badgeText = "Réalisation professionnelle – Épreuve E6";
+  else if(e5Projects.includes(key)) badgeText = "Situation professionnelle – Épreuve E5";
   else if(webProjects.includes(key)) badgeText = "Projet web – BTS SIO";
   let html = `<span class="modal-badge">${badgeText}</span>`;
   html += `<div class="modal-title">${d.title}</div>`;
